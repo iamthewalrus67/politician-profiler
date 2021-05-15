@@ -13,7 +13,7 @@ class Trends:
 
     def get_interest_over_time(self):
         dataframe = self.trends.interest_over_time()
-        return dataframe[dataframe[self.name] > 0]
+        return dataframe[dataframe[self.name] > 0][self.name].to_dict()
 
     def get_countries(self):
         dataframe = self.trends.interest_by_region()
@@ -22,5 +22,6 @@ class Trends:
     def get_suggestions(self):
         pass
 
-# q = Trends(input())
-# print(q.get_countries())
+q = Trends(input())
+p = q.get_interest_over_time()
+print(p)
