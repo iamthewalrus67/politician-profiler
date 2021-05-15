@@ -122,6 +122,11 @@ input:valid ~ label {
   display: none;
 }
 
+form {
+  display: -ms-grid;
+  display: grid;
+}
+
 button {
   margin-top: 1em;
   height: 65px;

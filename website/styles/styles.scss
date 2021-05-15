@@ -25,6 +25,8 @@ body {
     }
 }
 
+
+
 .information {
     margin: auto;
     margin-top: 9em;
@@ -75,6 +77,9 @@ input:valid ~ label{
     line-height: 24px;
     letter-spacing: 0.02em;
     display: none;
+}
+form {
+    display: grid;
 }
 
 button {

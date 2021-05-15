@@ -5,9 +5,11 @@ app = Flask(__name__)
 
 articles = []
 
+
 @app.route("/")
 def page():
     return render_template("index.html")
+
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
@@ -23,5 +25,6 @@ def analyze():
 
     return render_template("success.html", politician_name=name, articles=articles)
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
