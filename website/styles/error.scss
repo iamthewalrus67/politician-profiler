@@ -6,85 +6,40 @@ body {
     font-family: 'Rubik';
 }
 
-.text {
-    margin: 0em .9em 2em 0em;
-    display: grid;
+.header {
+    margin: 3em 0em 2em 2em;
+    color: #728AB7;
+    opacity: 50%;
+}
+
+.information {
+    margin: 9em auto 0 auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: left;
     color: #728AB7;
     h1 {
-        font-size: 2em;
+        font-size: 3em;
+        max-width: 7em;
+        text-align: center;
         margin: 0;
-        max-width: 10em;
     }
     p {
         font-size: 1.1em;
         font-style: normal;
         font-weight: 400;
         max-width: 15em;
+        text-align: center;
+        margin-bottom: 3em;
     }
 }
 
-
-
-.information {
-    margin: auto;
-    margin-top: 9em;
-}
-
-img {
-    display: none;
-}
-
-.field {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: 65px;
-    margin: auto;
-}
-
-input {
-    width: 15em;
-    height: 65px;
-    padding-left: 25px;
-    padding-right: 0;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
-    color: #a3a2a2;
-    border-radius: 40px;
-    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
-}
-
-input:focus{
-    box-shadow: inset 1px 1px 2px #BABECC,
-                inset -1px -1px 2px #ffffff73;
-    }
-
-input:valid ~ label{
-    opacity: 0;
-    }
-
-::placeholder {
-    font-family: Rubik;
-    opacity: 50%;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    display: none;
-}
-form {
-    display: grid;
-}
 
 button {
-    margin-top: 1em;
     height: 65px;
+    width: 15em;
     padding: 0;
     font-size: 1.2em;
     line-height: 1em;
@@ -105,30 +60,9 @@ button:active{
                 inset -5px -5px 10px #ffffff73;
     }
 
-@media only screen and (min-width: 1000px) {
-    .information {
-        margin: auto;
-        padding-right: 5em;
-    }
-
-    .content {
-        display: flex;
-        img {
-            padding: 0;
-            height: auto;
-            height: 100vh;
-            width: 60%;
-            object-fit: contain;
-            display: block;
-        }
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .content {
-        width: 1190px;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
+@media only screen and (min-width: 800px) {
+    .header {
+        margin-left: 5em;
+        margin-top: 4em;
     }
 }
