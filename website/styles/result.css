@@ -62,7 +62,7 @@ body {
   border-radius: 2em;
 }
 
-.latest-news h2 {
+.latest-news h2, .interest-overtime h2 {
   letter-spacing: 0.02em;
   font-style: normal;
   font-weight: bold;
@@ -70,6 +70,14 @@ body {
   color: #728AB7;
   margin-top: 1.5em;
   margin-bottom: 2em;
+}
+
+.interest-overtime {
+  margin-bottom: 2em;
+}
+
+.twitter {
+  margin-bottom: 6.2em;
 }
 
 .twitter h2 {
@@ -148,6 +156,26 @@ a {
   padding-bottom: 2em;
 }
 
+#line-chart {
+  background-color: blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15em;
+  width: 28em;
+  text-align: center;
+  border-radius: 2em;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+          box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+  color: #728AB7;
+  cursor: pointer;
+}
+
+.chart {
+  text-align: center;
+}
+
 @media only screen and (min-width: 900px) {
   .bars {
     margin: 0 4em 0 4em;
@@ -165,6 +193,10 @@ a {
   .text-tweets {
     width: 550px;
     height: 200px;
+  }
+  #line-chart {
+    height: 25em;
+    width: 35em;
   }
 }
 /*# sourceMappingURL=result.css.map */
