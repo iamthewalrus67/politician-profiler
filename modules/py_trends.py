@@ -7,9 +7,9 @@ class Trends:
         self.trends = TrendReq(hl='uk', tz=360)
         self.trends.build_payload([name])
 
-    def get_related_topics(self):
-        topics = self.trends.related_topics()
-        # return topics
+    # def get_related_topics(self):
+    #     topics = self.trends.related_topics()
+    #     return topics
 
     def get_interest_over_time(self):
         dataframe = self.trends.interest_over_time()
@@ -19,9 +19,5 @@ class Trends:
         dataframe = self.trends.interest_by_region()
         return dataframe[dataframe[self.name] > 0][self.name].to_dict()
 
-    def get_suggestions(self):
-        pass
-
-q = Trends(input())
-p = q.get_interest_over_time()
-print(p)
+    # def get_suggestions(self):
+    #     return self.trends.suggestions(self.name)
