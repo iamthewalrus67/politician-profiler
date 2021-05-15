@@ -13,15 +13,17 @@
   </head>
   <body>
     <div class="content">
-    <img src="images/AVATARZ - Steve Jobs.png">
-    <div class="information">
+      <img src="images/AVATARZ - Steve Jobs.png">
+      <div class="information">
     <div class="text">
         <h1>Politician Profiler</h1>
         <p>Застосунок для аналізу іміджу політика і створення політичного профілю</p>
     </div>
     <div class="field">
-        <input type="text" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''" onblur="this.placeholder = 'Ім\'я Прізвище'">
-        <button>Аналізувати</button>
+      <form action="/analyze" method="POST">
+        <input type="text" name="name_surname" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''" onblur="this.placeholder = 'Ім\'я Прізвище'">
+        <button>Аналізувати</button>   
+      </form>
     </div>
     </div>
     </div>
