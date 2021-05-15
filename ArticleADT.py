@@ -44,13 +44,3 @@ class ArticleADT:
                 string += key + ": " + self.article[key] + "\n"
         
         return string
-
-# news = ArticleADT("Володимир Зеленський", 0)
-# news.set_date_time()
-# news.set_title()
-# news.set_link()
-# news.set_image()
-# news.set_media()
-# news.set_description()
-# print(news)
-# print(type(news))
