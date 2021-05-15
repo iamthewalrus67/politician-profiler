@@ -35,8 +35,4 @@ def analyze():
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     app.run()
-=======
-    app.run(debug=True)
->>>>>>> e91142904cf5a1429eba4500d13753829584ec6b
