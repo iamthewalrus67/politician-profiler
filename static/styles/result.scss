@@ -34,7 +34,6 @@ body {
         font-weight: 400;
         color: #2a303b;
         text-align: justify;
-        // margin: auto auto 0 auto;
     }
 }
 .info {
@@ -46,6 +45,9 @@ body {
         margin-right: auto;
         background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
         border-radius: 2em;
+        width: 260px;
+        height: 360px;
+        object-fit: cover;
     }
 }
 

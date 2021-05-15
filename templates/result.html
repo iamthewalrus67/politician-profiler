@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='styles/result.css'>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href='static/styles/result.css'>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -19,54 +19,55 @@
 <body>
     <div class="content">
         <div class="header">
+            <a href="{{url_for('index')}}">
             <h2>Politician Profiler</h2>
+            </a>
         </div>
         <div class="politician">
-            <h1>Володимир Зеленський</h1>
+            <h1>{{name}}</h1>
             <div class="info">
                 <div class="text-info">
-                    <p>Шостий і чинний Президент України з 20 травня 2019 року. До вступу на посаду здобув популярність як шоумен, актор, комік, режисер, продюсер і сценарист. Був керівником «Студії Квартал-95» (2003—2019) і продюсером проросійського телеканалу «Інтер» (2010—2012).
-    Розпочав політичну кар'єру 2019 року та балотувався на виборах президента України 2019 року. За підсумками голосування був обраний Президентом України.</p>
+                    <p>{{politician_description}}</p>
                         <ul id='list-features'>
                             <li>✅ Кнопкодавить</li>
                             <li>❌ Прогульник</li>
                             <li>❌ Корупціонер</li>
                         </ul>
                 </div>
-                <img src="images/266px-Volodymyr_Zelensky_Official_portrait.jpg">
+                <img src={{image}}>
             </div>
         </div>
         <div class="latest-news">
             <h2>Останні новини</h2>
             <div class="bars">
                 <div class='news'>
-                    <a href="https://www.dw.com/uk/merkel-makron-i-zelenskyi-obhovoriat-sytuatsiiu-na-donbasi/a-57221876">
+                    <a href={{link_1}}>
                     <img class="photo" src="images/ArticleImage_181768.jpg">
-                    <p class="descr">Зеленський провів велику таємну нараду з генералами...</p>
+                    <p class="descr">{{desc_1}}</p>
                     </a>
                 </div>
                 <div class="news">
-                    <a href="https://www.dw.com/uk/merkel-makron-i-zelenskyi-obhovoriat-sytuatsiiu-na-donbasi/a-57221876">
+                    <a href={{link_2}}>
                     <img class="photo" src="images/_115326691_78a1b67a4341100e15fcefc5326c5103_1603987038_extra.jpg">
-                    <p class="descr">Зеленський взяв участь у відкритті нової будівлі Київ...</p>
+                    <p class="descr">{{desc_2}}</p>
                     </a>
                 </div>
                 <div class="news">
-                    <a href="https://www.dw.com/uk/merkel-makron-i-zelenskyi-obhovoriat-sytuatsiiu-na-donbasi/a-57221876">
+                    <a href={{link_3}}>
                     <img class="photo" src="images/AeyQ3ZLn5o3bXsYY0KzrQIKH3YcgV4dfYNaZMVbO.jpeg">
-                    <p class="descr">Зеленський присвоїв пожиттєві стипендії українцям, які...</p>
+                    <p class="descr">{{desc_3}}</p>
                     </a>
                 </div>
                 <div class="news">
-                    <a href="https://www.dw.com/uk/merkel-makron-i-zelenskyi-obhovoriat-sytuatsiiu-na-donbasi/a-57221876">
+                    <a href={{link_4}}>
                     <img class="photo" src="images/49246227_303.jpg">
-                    <p class="descr">РНБО ввела санкції проти 557 злодіїв в законі і 111...</p>
+                    <p class="descr">{{desc_4}}</p>
                     </a>
                 </div>
                 <div class="news">
-                    <a href="https://www.dw.com/uk/merkel-makron-i-zelenskyi-obhovoriat-sytuatsiiu-na-donbasi/a-57221876">
+                    <a href={{link_5}}>
                     <img class="photo" src="images/721b19a-zelensky-medvedchuk.jpg">
-                    <p class="descr">Зеленський спровадив обшук у помешканні Медведчука...</p>
+                    <p class="descr">{{desc_5}}</p>
                     </a>
                 </div>
             </div>
@@ -92,7 +93,7 @@
             </div>
             <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
             <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script type="text/javascript" src="slick/slick.min.js"></script>
+            <script type="text/javascript" src="static/slick/slick.min.js"></script>
             <script type="text/javascript">
             $(document).ready(function(){$('.text-tweets').slick();});
             </script>
