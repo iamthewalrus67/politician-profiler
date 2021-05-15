@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        <title>Domain</title>
-    </head>
-    <body>
-You domain is registered! (Well, not really.)
+<head>
+    <title>Success!</title>
+</head>
+<body>
+    <h1>Successful entry</h1>
+    <h2>You entered: {{ politician_name }}</h2>
+    <p>Latest news about this politician: </p>
+    {% for news in articles %}
+        <p>{{ news }}</p>
+    {% endfor %}
+
 </body>
 </html>
