@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='static/styles/result.css'>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Politician Profiler</title>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <h2>Politician Profiler</h2>
+    </div>
+    <div class="politician">
+        <h1>{{ name_surname }}</h1>
+        <div class="info">
+        <p>{{ description }}</p>
+        <img src="static/images/266px-Volodymyr_Zelensky_Official_portrait.jpg">
+        </div>
+    </div>
+    <div class="latest-news">
+        <h2>Останні новини</h2>
+        <div class="bars">
+            <div class='news'>
+                <a href={{link_1}}>
+                <img class="photo" src={{image_1}}>
+                <p class="descr">{{desc_1}}</p>
+                </a>
+            </div>
+            <div class="news">
+                <a href={{link_2}}>
+                <img class="photo" src={{image_2}}>
+                <p class="descr">{{desc_2}}</p>
+                </a>
+            </div>
+            <div class="news">
+                <a href={{link_3}}>
+                <img class="photo" src={{image_3}}>
+                <p class="descr">{{desc_3}}</p>
+                </a>
+            </div>
+            <div class="news">
+                <a href={{link_4}}>
+                <img class="photo" src={{image_4}}>
+                <p class="descr">{{desc_4}}</p>
+                </a>
+            </div>
+            <div class="news">
+                <a href={{link_5}}>
+                <img class="photo" src={{image_5}}>
+                <p class="descr">{{desc_5}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="twitter">
+        <h2>Висловлювання у Twitter про Україну</h2>
+        <div class="text-tweets">
+            <div class="tweet">
+                <p class="tweet_text">Голокост – спільна трагедія всього людства. Вперше відзначаємо День пам'яті українців, які рятували євреїв під час Другої світової війни. Прапор України на четвертому місці за кількістю Праведників народів світу. Це понад 2,5 тис. героїв. Їхній подвиг – приклад людяності й самопожертви.</p>
+            </div>
+            <div class="tweet">
+                <p class="tweet_text">Захист у віртуальному світі важливий, як і в реальному. Кібербезпека – виклик для світу. Flag of Ukraine інтегрується у глобальну систему кібербезпеки. У Кіберцентрі #UA30 відпрацьовуватимуть реальні сценарії кібератак, а команда допомагатиме всім структурам, організаціям і громадянам.</p>
+            </div>
+            <div class="tweet">
+                <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+            </div>
+            <div class="tweet">
+                <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+            </div>
+            <div class="tweet">
+                <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="static/slick/slick.min.js"></script>
+      
+        <script type="text/javascript">
+          $(document).ready(function(){$('.text-tweets').slick();});
+        </script>
+      
+    </div>
+    </div>
+</body>
+</html>
