@@ -1,6 +1,7 @@
 from WikiADT import WikiADT
 from flask import Flask, render_template, request, redirect
 from ArticleADT import ArticleADT
+from WikiADT import WikiADT
 
 app = Flask(__name__)
 
@@ -15,8 +16,10 @@ def page():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     name = request.form["name_surname"]
+    print(name)
 
     wiki_object = WikiADT(name)
+
     articles = ArticleADT(name)
 
     return render_template("result.html", image=wiki_object.links[1], name=name, politician_description=wiki_object.wiki_desc,
@@ -27,5 +30,6 @@ def analyze():
                            desc_5=articles[4][0], link_5=articles[4][1])
 
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

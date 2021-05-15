@@ -20,7 +20,3 @@ class ArticleADT:
             text = info[i]
             info_list = [text["title"], text["link"]]
             self.articles.append(info_list)
-
-
-article = ArticleADT('Віктор Медведчук')
-print(article)

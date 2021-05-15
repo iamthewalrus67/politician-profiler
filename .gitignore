@@ -131,4 +131,8 @@ dmypy.json
 # VS Code files
 .vscode
 
+# Some MacOS files
 .DS_Store
+
+# Keys and other important stuff
+bearer_token
