@@ -6,9 +6,11 @@ app = Flask(__name__)
 
 articles = []
 
+
 @app.route("/")
 def page():
     return render_template("index.html")
+
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
@@ -31,5 +33,10 @@ def analyze():
             desc_4=articles[3]["title"], link_4=articles[3]["url"], image_4=articles[3]["image"], \
                 desc_5=articles[4]["title"], link_5=articles[4]["url"], image_5=articles[4]["image"])
 
+
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run()
+=======
+    app.run(debug=True)
+>>>>>>> e91142904cf5a1429eba4500d13753829584ec6b

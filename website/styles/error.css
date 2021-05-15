@@ -19,9 +19,9 @@ body {
 }
 
 .text h1 {
-  font-size: 4em;
+  font-size: 2em;
   margin: 0;
-  max-width: 4em;
+  max-width: 10em;
 }
 
 .text p {
@@ -184,4 +184,4 @@ button:active {
     margin: auto;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=error.css.map */
