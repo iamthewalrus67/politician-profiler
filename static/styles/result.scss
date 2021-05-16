@@ -18,8 +18,10 @@ body {
 }
 
 .politician {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     h1 {
         color: var(--primary-color);
         justify-content: center;
@@ -141,7 +143,8 @@ a {
     padding-left: 4.5em;
     padding-right: 4.5em;
     list-style: none;
-    display: grid;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     color: #2a303b;
     li {
