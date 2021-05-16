@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
+:root {
+    --primary-color: #728AB7;
+}
+
 body {
     background: #E9EDF0;
     margin: 0;
@@ -9,9 +13,8 @@ body {
 .text {
     margin: 0em .9em 2em 0em;
     display: grid;
-    align-items: center;
     justify-content: center;
-    color: #728AB7;
+    color: var(--primary-color);
     h1 {
         font-size: 4em;
         margin: 0;
@@ -25,8 +28,6 @@ body {
     }
 }
 
-
-
 .information {
     margin: auto;
     margin-top: 9em;
@@ -37,11 +38,10 @@ img {
 }
 
 .field {
-    display: grid;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    width: auto;
     height: 65px;
+    width: auto;
     margin: auto;
 }
 
@@ -52,7 +52,7 @@ input {
     padding-right: 0;
     outline: none;
     border: none;
-    font-size: 18px;
+    font-size: 1.15em;
     background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
     color: #a3a2a2;
     border-radius: 40px;
@@ -73,11 +73,11 @@ input:valid ~ label{
     opacity: 50%;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.1em;
     line-height: 24px;
     letter-spacing: 0.02em;
-    display: none;
 }
+
 form {
     display: grid;
 }
@@ -95,12 +95,12 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
-    color: #728AB7;
+    color: var(--primary-color);
     box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
 }
 
 button:active{
-    color: #728AB7;
+    color: var(--primary-color);
     box-shadow: inset 2px 2px 5px #BABECC,
                 inset -5px -5px 10px #ffffff73;
     }
@@ -115,7 +115,6 @@ button:active{
         display: flex;
         img {
             padding: 0;
-            height: auto;
             height: 100vh;
             width: 60%;
             object-fit: contain;
@@ -127,8 +126,6 @@ button:active{
 @media only screen and (min-width: 1200px) {
     .content {
         width: 1190px;
-        align-items: center;
-        justify-content: center;
         margin: auto;
     }
 }
