@@ -1,7 +1,6 @@
 '''
 Module for working with Twitter API.
 '''
-
 import requests
 import os
 from googlesearch import search
@@ -13,7 +12,6 @@ def get_twitter_id(politician_name):
     query = politician_name + " твіттер"
     for result in search(query, tld="co.in", num=3, stop=1, pause=2):
         twitter_link = result
-
     if "twitter.com" not in twitter_link:
         return None
     else:
@@ -39,10 +37,8 @@ class Twitter:
         params = {
             'screen_name': screen_name
         }
-
         response = requests.get(
             url, headers=self.headers, params=params)
-
         return response.json()
 
     def get_latest_tweets(self, screen_name):
@@ -54,9 +50,10 @@ class Twitter:
                 'screen_name': screen_name,
                 'count': 5
             }
-
             response = requests.get(url, headers=self.headers, params=params)
             text = response.json()
+            # print(self.latest_tweets[0]["entities"]["urls"][0]["url"])
             for tweet in text:
-                tweet = tweet["text"].split("https")
-                self.latest_tweets.append(tweet[0])
+                link = tweet["entities"]["urls"][0]["url"]
+                content = tweet["text"].split("https")
+                self.latest_tweets.append([content[0], link])

@@ -21,7 +21,7 @@ def page():
 def analyze():
     name = request.form["name_surname"]
 
-    if len(name.split(' ')) == 1 or len(set(name.split(' '))) != len(name.split(' ')):
+    if len(name.split(' ')) == 1 or len(set(name.lower().split(' '))) != len(name.lower().split(' ')):
         return render_template("error.html", message="Введіть прізвище та ім'я")
 
     check_if_politicain_exists, name = check_database.check_all_politicians(
@@ -45,6 +45,7 @@ def analyze():
     surname = name.split()[0]
     trends = Trends([surname.lower()])
     interest = trends.interest_over_time()
+    print(interest)
     dates = [str(i).split('T')[0]
              for i in list(interest.index.values)][-20:]
     popularity_level = interest[surname.lower()].tolist()[-20:]
@@ -62,10 +63,9 @@ def analyze():
                            desc_4=articles[3][0], link_4=articles[3][1], image_4=articles[3][2],
                            desc_5=articles[4][0], link_5=articles[4][1], image_5=articles[4][2],
                            popularity_level=popularity_level, dates=dates, absentee=absentee, cheater=cheater, thief=thief,
-                           tweeet_1 =tw.latest_tweets[0], tweet_2=tw.latest_tweets[1], tweet_3=tw.latest_tweets[2],
+                           tweeet_1=tw.latest_tweets[0], tweet_2=tw.latest_tweets[1], tweet_3=tw.latest_tweets[2],
                            tweet_4=tw.latest_tweets[3], tweet_5=tw.latest_tweets[4], declaration_link=declaration.link,
                            salary='{:,}'.format(declaration.salary).replace(',', ' '))
-
 
 
 if __name__ == "__main__":
