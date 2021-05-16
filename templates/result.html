@@ -35,6 +35,7 @@
                         <li>❌ Прогульник</li>
                         <li>❌ Корупціонер</li>
                     </ul>
+                    <button class="declaration" href="#">Декларація</button>
                 </div>
                 <img src={{image}}>
             </div>
@@ -127,6 +128,60 @@
     <div class="footer">
         <p>© Roman Kulyk, Vira Salieva, Bohdan Ruban, Vladyslav Vasylevych<br>Lviv, 2021</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        lineChartCanvas = document.getElementById('line-chart')
+
+        popularityData = {{ popularity_level | tojson }};
+        datesLabels = {{ dates | tojson }};
+
+        var lineData = {
+            labels: datesLabels,
+            datasets: [{
+                label: " ",
+                data: popularityData,
+                borderColor: 'rgba(114, 138, 183, 1)',
+                backgroundColor: 'rgba(114, 138, 183, 1)'
+            }]
+        };
+
+        var options = {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    boxWidth: 80,
+                    fontColor: 'black'
+                }
+
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                },
+            },
+            animations: {
+                y: {
+                    easing: 'easeInOutElastic',
+                    from: (ctx) => {
+                        if (ctx.type === 'data') {
+                            if (ctx.mode === 'default' && !ctx.dropped) {
+                                ctx.dropped = true;
+                                return 0;
+                            }
+                        }
+                    }
+                }
+            },
+        };
+        var lineChart = new Chart(lineChartCanvas, {
+            type: 'bar',
+            data: lineData,
+            options: options
+        });
+    </script>
 </body>
 
 </html>
