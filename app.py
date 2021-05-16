@@ -4,6 +4,7 @@ from ArticleADT import ArticleADT
 from WikiADT import WikiADT
 from modules.trends import Trends
 from modules import check_database
+from modules.declaration import Declaration
 
 app = Flask(__name__)
 
@@ -42,13 +43,16 @@ def analyze():
              for i in list(interest.index.values)][-20:]
     popularity_level = interest[name.lower()].tolist()[-20:]
 
+    declaration = Declaration(name)
+
     return render_template("result.html", image=wiki_object.links[1], name=name, politician_description=wiki_object.wiki_desc,
                            desc_1=articles[0][0], link_1=articles[0][1],
                            desc_2=articles[1][0], link_2=articles[1][1],
                            desc_3=articles[2][0], link_3=articles[2][1],
                            desc_4=articles[3][0], link_4=articles[3][1],
                            desc_5=articles[4][0], link_5=articles[4][1], popularity_level=popularity_level, dates=dates,
-                           absentee=absentee, cheater=cheater, thief=thief)
+                           absentee=absentee, cheater=cheater, thief=thief, declaration_link=declaration.link,
+                           salary='{:,}'.format(declaration.salary).replace(',', ' '))
 
 
 if __name__ == "__main__":
