@@ -8,8 +8,8 @@ def check_all_politicians(name: str):
             names = set(name.lower().strip().split(' '))
             words = (line.lower().strip().split(' '))
             if names.issubset(words):
-                return True
-        return False
+                return True, line.strip()
+        return False, None
 
 
 def check_knopkodavu(name: str):
