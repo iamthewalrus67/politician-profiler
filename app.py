@@ -20,9 +20,12 @@ def page():
 def analyze():
     name = request.form["name_surname"]
 
+    if len(name.split(' ')) == 1:
+        return render_template("error.html", message="Введіть прізвище та ім'я")
+
     check_if_politicain_exists = check_database.check_all_politicians(name)
     if check_if_politicain_exists is False:
-        return render_template('error.html')
+        return render_template('error.html', message="Вказана вами особа не є українським політиком")
 
     vorishki, progulshiki, knopkodavu = check_database.check_politician(name)
     thief, absentee, cheater = "", "", ""
