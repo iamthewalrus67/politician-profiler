@@ -61,6 +61,8 @@ body {
         color: var(--primary-color);
         margin-top: 1.5em;
         margin-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }
 
@@ -102,6 +104,8 @@ body {
         color: var(--primary-color);
         margin-top: 2em;
         margin-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
     margin-bottom: 8.5em;
 }
@@ -137,7 +141,7 @@ a {
     padding-left: 4.5em;
     padding-right: 4.5em;
     list-style: none;
-    display: flex;
+    display: grid;
     justify-content: space-between;
     color: #2a303b;
     li {
@@ -184,6 +188,7 @@ a {
     margin: auto;
     padding-top: 2em;
     padding-bottom: 2em;
+    color: #2a303b;
 }
 
 #line-chart {
@@ -194,18 +199,22 @@ a {
 }
 
 .salary p {
-    font-size: 4em;
+    font-size: 2.4em;
     text-align: center;
     color: #2a303b;
     font-weight: bold;
     opacity: 0.75;
+    padding-left: 2em;
+    padding-right: 2em;
 } 
 
 .chart {
     text-align: center;
     margin: auto;
     height: 15em;
-    width: 28em;
+    width: 20em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .footer {
@@ -240,4 +249,10 @@ a {
     .twitter {
         margin-bottom: 5em;
     }
+    #list-features {
+        display: flex;
+    }
+    .salary p {
+        font-size: 3.7em;
+    } 
 }
