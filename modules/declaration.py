@@ -5,7 +5,7 @@ import pprint
 class Declaration:
     def __init__(self, name):
         self.name = name
-        self.declaration_id = self.get_declaration()['data'][0]['id']
+        self.declaration_id = self.get_declaration()['id']
         self.declaration = self.get_declaration_details()
         self.salary = self.get_salary()
         self.link = self.get_declaration_link()
@@ -17,7 +17,10 @@ class Declaration:
         }
 
         response = requests.get(url, params=params)
-        return response.json()
+        declarations = response.json()['data']
+        for declaration in declarations:
+            if declaration['declaration_type'] == 1:
+                return declaration
 
     def get_declaration_details(self):
         url = 'https://public-api.nazk.gov.ua/v2/documents/'+self.declaration_id
@@ -37,5 +40,10 @@ class Declaration:
         return total_income
 
 
-# declaration = Declaration("Юлія Тимошенко").get_declaration()
+# declaration = Declaration("Петро Порошенко").get_declaration()
+# print(pprint.pprint(declaration['data'][0]))
+# print()
+# print(pprint.pprint(declaration['data'][3]))
+# print(declaration['data'][0]['data']['step_0']['data']['declaration_type'])
+# print(declaration['data'][4]['declaration_type'])
 # print(declaration['data'][0]['data']['step_1']['data']['workPost'])
