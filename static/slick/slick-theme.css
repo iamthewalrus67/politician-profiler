@@ -4,6 +4,10 @@
   background: #fff url("./ajax-loader.gif") center center no-repeat;
 }
 
+:root {
+  --privary-value: 65%
+}
+
 /* Icons */
 @font-face {
   font-family: "slick";
@@ -25,7 +29,7 @@
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 63%;
+  top: var(--privary-value);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;

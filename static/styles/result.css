@@ -68,6 +68,8 @@ body {
   color: var(--primary-color);
   margin-top: 1.5em;
   margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .declaration {
@@ -108,7 +110,7 @@ body {
 }
 
 .twitter {
-  margin-bottom: 6.2em;
+  margin-bottom: 8.5em;
 }
 
 .twitter h2 {
@@ -119,6 +121,8 @@ body {
   color: var(--primary-color);
   margin-top: 2em;
   margin-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .bars {
@@ -156,13 +160,16 @@ a {
   padding-left: 4.5em;
   padding-right: 4.5em;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #2a303b;
+}
+
+#list-features li {
+  margin: auto;
 }
 
 .text-info {
@@ -187,7 +194,7 @@ a {
 
 .tweet {
   margin: 1.6em;
-  width: 350px;
+  width: 300px;
   height: 200px;
   border-radius: 2em;
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
@@ -197,18 +204,19 @@ a {
 }
 
 .text-tweets {
-  width: 450px;
+  width: 400px;
   height: 200px;
   margin: auto;
 }
 
 .tweet_text {
-  width: 350px;
-  height: 150px;
+  width: 300px;
+  height: auto;
   text-align: center;
   margin: auto;
   padding-top: 2em;
   padding-bottom: 2em;
+  color: #2a303b;
 }
 
 #line-chart {
@@ -221,18 +229,22 @@ a {
 }
 
 .salary p {
-  font-size: 4em;
+  font-size: 2.4em;
   text-align: center;
   color: #2a303b;
   font-weight: bold;
   opacity: 0.75;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .chart {
   text-align: center;
   margin: auto;
   height: 15em;
-  width: 28em;
+  width: 20em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .footer {
@@ -263,6 +275,20 @@ a {
     text-align: center;
     height: 25em;
     width: 35em;
+  }
+  .tweet_text {
+    width: 450px;
+  }
+  .twitter {
+    margin-bottom: 5em;
+  }
+  #list-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .salary p {
+    font-size: 3.7em;
   }
 }
 /*# sourceMappingURL=result.css.map */

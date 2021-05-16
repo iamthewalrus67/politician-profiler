@@ -19,11 +19,9 @@ body {
 
 .politician {
     display: grid;
-    // align-items: center;
     justify-content: center;
     h1 {
         color: var(--primary-color);
-        // align-items: center;
         justify-content: center;
         font-size: 2.7em;
         text-align: center;
@@ -46,9 +44,6 @@ body {
     img {
         padding: 0;
         margin: 2em auto 2em auto;
-        // margin-left: auto;
-        // margin-right: auto;
-        // background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
         border-radius: 2em;
         width: 260px;
         height: 360px;
@@ -66,6 +61,8 @@ body {
         color: var(--primary-color);
         margin-top: 1.5em;
         margin-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }
 
@@ -107,8 +104,10 @@ body {
         color: var(--primary-color);
         margin-top: 2em;
         margin-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
-    margin-bottom: 6.2em;
+    margin-bottom: 8.5em;
 }
 
 .bars {
@@ -137,13 +136,17 @@ a {
     max-width: 15.3em;
     margin: 1.4em auto 1.3em auto;
 }
+
 #list-features {
     padding-left: 4.5em;
     padding-right: 4.5em;
     list-style: none;
-    display: flex;
+    display: grid;
     justify-content: space-between;
     color: #2a303b;
+    li {
+        margin: auto;
+    }
 }
 
 .text-info {
@@ -162,7 +165,7 @@ a {
 
 .tweet {
     margin: 1.6em;
-    width: 350px;
+    width: 300px;
     height: 200px;
     border-radius: 2em;
     background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
@@ -171,7 +174,7 @@ a {
 }
 
 .text-tweets {
-    width: 450px;
+    width: 400px;
     height: 200px;
     margin: auto;
 }
@@ -179,12 +182,13 @@ a {
 //sorry for that naming =(
 
 .tweet_text {
-    width: 350px;
-    height: 150px;
+    width: 300px;
+    height: auto;
     text-align: center;
     margin: auto;
     padding-top: 2em;
     padding-bottom: 2em;
+    color: #2a303b;
 }
 
 #line-chart {
@@ -193,19 +197,24 @@ a {
     border-radius: 2em;
     color: var(--primary-color);
 }
+
 .salary p {
-    font-size: 4em;
+    font-size: 2.4em;
     text-align: center;
     color: #2a303b;
     font-weight: bold;
     opacity: 0.75;
+    padding-left: 2em;
+    padding-right: 2em;
 } 
 
 .chart {
     text-align: center;
     margin: auto;
     height: 15em;
-    width: 28em;
+    width: 20em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .footer {
@@ -234,4 +243,16 @@ a {
         height: 25em;
         width: 35em;
     }
+    .tweet_text {
+        width: 450px;
+    }
+    .twitter {
+        margin-bottom: 5em;
+    }
+    #list-features {
+        display: flex;
+    }
+    .salary p {
+        font-size: 3.7em;
+    } 
 }
