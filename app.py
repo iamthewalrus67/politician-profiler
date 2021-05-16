@@ -17,7 +17,6 @@ def page():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     name = request.form["name_surname"]
-    print(name)
 
     wiki_object = WikiADT(name)
 
