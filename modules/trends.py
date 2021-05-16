@@ -33,11 +33,12 @@ class Trends:
         return self.pytrends.suggestions(keyword)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # trends = Trends(['Зеленський', 'Zelensky', 'Trump'])
-    trends = Trends(['зеленський'])
+    # trends = Trends(['порошенко'])
     # trends = Trends(['медведчук'])
-    interest = trends.interest_over_time()
+    # interest = trends.interest_over_time()
+    # print(interest)
     # print(trends.interest_by_region())
     # print(trends.related_topics())
     # print(trends.related_querries())
