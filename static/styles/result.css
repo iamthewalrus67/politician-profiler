@@ -60,10 +60,29 @@ body {
      object-fit: cover;
 }
 
+.latest-news h2, .interest-overtime h2, .salary h2 {
+  letter-spacing: 0.02em;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
 .declaration {
   height: 45px;
   width: 10em;
-  margin: 1em auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 4em auto;
   font-size: 1em;
   line-height: 1em;
   font-weight: normal;
@@ -82,16 +101,6 @@ body {
   color: var(--primary-color);
   -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
           box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
-}
-
-.latest-news h2, .interest-overtime h2 {
-  letter-spacing: 0.02em;
-  font-style: normal;
-  font-weight: bold;
-  text-align: center;
-  color: var(--primary-color);
-  margin-top: 1.5em;
-  margin-bottom: 2em;
 }
 
 .interest-overtime {
@@ -153,6 +162,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: #2a303b;
 }
 
 .text-info {
@@ -208,6 +218,14 @@ a {
   text-align: center;
   border-radius: 2em;
   color: var(--primary-color);
+}
+
+.salary p {
+  font-size: 4em;
+  text-align: center;
+  color: #2a303b;
+  font-weight: bold;
+  opacity: 0.75;
 }
 
 .chart {

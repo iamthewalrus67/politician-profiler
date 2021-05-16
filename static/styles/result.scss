@@ -56,10 +56,26 @@ body {
     }
 }
 
+
+.latest-news, .interest-overtime, .salary {
+    h2 {
+        letter-spacing: 0.02em;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        color: var(--primary-color);
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+    }
+}
+
 .declaration {
     height: 45px;
     width: 10em;
-    margin: 1em auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 4em auto;
     font-size: 1em;
     line-height: 1em;
     font-weight: normal;
@@ -79,17 +95,6 @@ body {
                 inset -5px -5px 10px #ffffff73;
     }
 
-.latest-news, .interest-overtime {
-    h2 {
-        letter-spacing: 0.02em;
-        font-style: normal;
-        font-weight: bold;
-        text-align: center;
-        color: var(--primary-color);
-        margin-top: 1.5em;
-        margin-bottom: 2em;
-    }
-}
 .interest-overtime {
     margin-bottom: 2em;
 }
@@ -138,6 +143,7 @@ a {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    color: #2a303b;
 }
 
 .text-info {
@@ -187,6 +193,13 @@ a {
     border-radius: 2em;
     color: var(--primary-color);
 }
+.salary p {
+    font-size: 4em;
+    text-align: center;
+    color: #2a303b;
+    font-weight: bold;
+    opacity: 0.75;
+} 
 
 .chart {
     text-align: center;
