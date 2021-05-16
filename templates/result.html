@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='static/styles/result.css'>
-    <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -16,11 +17,12 @@
     <meta name="theme-color" content="#ffffff">
     <title>Politician Profiler</title>
 </head>
+
 <body>
     <div class="content">
         <div class="header">
-            <a href="{{url_for('index')}}">
-            <h2>Politician Profiler</h2>
+            <a href="/">
+                <h2>Politician Profiler</h2>
             </a>
         </div>
         <div class="politician">
@@ -28,11 +30,11 @@
             <div class="info">
                 <div class="text-info">
                     <p>{{politician_description}}</p>
-                        <ul id='list-features'>
-                            <li>✅ Кнопкодавить</li>
-                            <li>❌ Прогульник</li>
-                            <li>❌ Корупціонер</li>
-                        </ul>
+                    <ul id='list-features'>
+                        <li>✅ Кнопкодавить</li>
+                        <li>❌ Прогульник</li>
+                        <li>❌ Корупціонер</li>
+                    </ul>
                 </div>
                 <img src={{image}}>
             </div>
@@ -42,32 +44,33 @@
             <div class="bars">
                 <div class='news'>
                     <a href={{link_1}}>
-                    <img class="photo" src="images/ArticleImage_181768.jpg">
-                    <p class="descr">{{desc_1}}</p>
+                        <img class="photo" src="images/ArticleImage_181768.jpg">
+                        <p class="descr">{{desc_1}}</p>
                     </a>
                 </div>
                 <div class="news">
                     <a href={{link_2}}>
-                    <img class="photo" src="images/_115326691_78a1b67a4341100e15fcefc5326c5103_1603987038_extra.jpg">
-                    <p class="descr">{{desc_2}}</p>
+                        <img class="photo"
+                            src="images/_115326691_78a1b67a4341100e15fcefc5326c5103_1603987038_extra.jpg">
+                        <p class="descr">{{desc_2}}</p>
                     </a>
                 </div>
                 <div class="news">
                     <a href={{link_3}}>
-                    <img class="photo" src="images/AeyQ3ZLn5o3bXsYY0KzrQIKH3YcgV4dfYNaZMVbO.jpeg">
-                    <p class="descr">{{desc_3}}</p>
+                        <img class="photo" src="images/AeyQ3ZLn5o3bXsYY0KzrQIKH3YcgV4dfYNaZMVbO.jpeg">
+                        <p class="descr">{{desc_3}}</p>
                     </a>
                 </div>
                 <div class="news">
                     <a href={{link_4}}>
-                    <img class="photo" src="images/49246227_303.jpg">
-                    <p class="descr">{{desc_4}}</p>
+                        <img class="photo" src="images/49246227_303.jpg">
+                        <p class="descr">{{desc_4}}</p>
                     </a>
                 </div>
                 <div class="news">
                     <a href={{link_5}}>
-                    <img class="photo" src="images/721b19a-zelensky-medvedchuk.jpg">
-                    <p class="descr">{{desc_5}}</p>
+                        <img class="photo" src="images/721b19a-zelensky-medvedchuk.jpg">
+                        <p class="descr">{{desc_5}}</p>
                     </a>
                 </div>
             </div>
@@ -76,26 +79,41 @@
             <h2>Висловлювання у Twitter про Україну</h2>
             <div class="text-tweets">
                 <div class="tweet">
-                    <p class="tweet_text">Голокост – спільна трагедія всього людства. Вперше відзначаємо День пам'яті українців, які рятували євреїв під час Другої світової війни. Прапор України на четвертому місці за кількістю Праведників народів світу. Це понад 2,5 тис. героїв. Їхній подвиг – приклад людяності й самопожертви.</p>
+                    <p class="tweet_text">Голокост – спільна трагедія всього людства. Вперше відзначаємо День пам'яті
+                        українців, які рятували євреїв під час Другої світової війни. Прапор України на четвертому місці
+                        за кількістю Праведників народів світу. Це понад 2,5 тис. героїв. Їхній подвиг – приклад
+                        людяності й самопожертви.</p>
                 </div>
                 <div class="tweet">
-                    <p class="tweet_text">Захист у віртуальному світі важливий, як і в реальному. Кібербезпека – виклик для світу. Flag of Ukraine інтегрується у глобальну систему кібербезпеки. У Кіберцентрі #UA30 відпрацьовуватимуть реальні сценарії кібератак, а команда допомагатиме всім структурам, організаціям і громадянам.</p>
+                    <p class="tweet_text">Захист у віртуальному світі важливий, як і в реальному. Кібербезпека – виклик
+                        для світу. Flag of Ukraine інтегрується у глобальну систему кібербезпеки. У Кіберцентрі #UA30
+                        відпрацьовуватимуть реальні сценарії кібератак, а команда допомагатиме всім структурам,
+                        організаціям і громадянам.</p>
                 </div>
                 <div class="tweet">
-                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і
+                        святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які
+                        вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи
+                        #Bucharest9 щодо політики РФ у Чорному морі.</p>
                 </div>
                 <div class="tweet">
-                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і
+                        святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які
+                        вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи
+                        #Bucharest9 щодо політики РФ у Чорному морі.</p>
                 </div>
                 <div class="tweet">
-                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи #Bucharest9 щодо політики РФ у Чорному морі.</p>
+                    <p class="tweet_text">Запросив @KlausIohannis взяти участь у саміті #КримськоїПлатформи і
+                        святкуванні Дня Незалежності Flag of Ukraine. Закликав Flag of Romania приєднатися до країн, які
+                        вже підписали Декларацію про європейську перспективу України. Вітаю Спільну заяву групи
+                        #Bucharest9 щодо політики РФ у Чорному морі.</p>
                 </div>
             </div>
             <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
             <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script type="text/javascript" src="static/slick/slick.min.js"></script>
             <script type="text/javascript">
-            $(document).ready(function(){$('.text-tweets').slick();});
+                $(document).ready(function () { $('.text-tweets').slick(); });
             </script>
         </div>
         <div class="interest-overtime">
@@ -110,4 +128,5 @@
         <p>© Roman Kulyk, Vira Salieva, Bohdan Ruban, Vladyslav Vasylevych<br>Lviv, 2021</p>
     </div>
 </body>
+
 </html>

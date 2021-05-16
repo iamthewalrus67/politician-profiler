@@ -6,25 +6,20 @@
 body {
   background: #E9EDF0;
   margin: 0;
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 
 .text {
-  margin: 0em .9em 2em 0em;
-  display: -ms-grid;
+  margin: 0em 0.9em 2em 0em;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: var(--primary-color);
 }
-
 .text h1 {
   font-size: 4em;
   margin: 0;
   max-width: 4em;
 }
-
 .text p {
   font-size: 1.1em;
   font-style: normal;
@@ -42,12 +37,8 @@ img {
 }
 
 .field {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: 65px;
   width: auto;
   margin: auto;
@@ -64,20 +55,18 @@ input {
   background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
   color: #a3a2a2;
   border-radius: 40px;
-  -webkit-box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
-          box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
 }
 
 input:focus {
-  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff73;
-          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff73;
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff73;
 }
 
 input:valid ~ label {
   opacity: 0;
 }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   font-family: Rubik;
   opacity: 50%;
   font-style: normal;
@@ -88,16 +77,6 @@ input:valid ~ label {
 }
 
 :-ms-input-placeholder {
-  font-family: Rubik;
-  opacity: 50%;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.1em;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-}
-
-::-ms-input-placeholder {
   font-family: Rubik;
   opacity: 50%;
   font-style: normal;
@@ -118,7 +97,6 @@ input:valid ~ label {
 }
 
 form {
-  display: -ms-grid;
   display: grid;
 }
 
@@ -136,14 +114,22 @@ button {
   outline: none;
   cursor: pointer;
   color: var(--primary-color);
-  -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-          box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
 }
 
 button:active {
   color: var(--primary-color);
-  -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
-          box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
+}
+
+.animation {
+  padding-top: 5em;
+  font-size: 1em;
+  color: #728AB7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -151,9 +137,8 @@ button:active {
     margin: auto;
     padding-right: 5em;
   }
+
   .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .content img {
@@ -165,11 +150,9 @@ button:active {
     display: block;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .content {
     width: 1190px;
     margin: auto;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

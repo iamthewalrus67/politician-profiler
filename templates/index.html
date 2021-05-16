@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href='static/styles/styles.css'>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <title>Politician Profiler</title>
-  </head>
-  <body>
-    <div class="content">
-      <img src="static/images/AVATARZ - Steve Jobs.png">
-      <div class="information">
-    <div class="text">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href='static/styles/styles.css'>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Politician Profiler</title>
+</head>
+
+<body>
+  <div class="animation" style="display: none;">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets10.lottiefiles.com/datafiles/riuf5c21sUZ05w6/data.json" background="transparent"
+      speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    <h1>Аналізуємо політика...</h1>
+  </div>
+  <div class="content">
+    <img src="static/images/AVATARZ - Steve Jobs.png">
+    <div class="information">
+      <div class="text">
         <h1>Politician Profiler</h1>
         <p>Застосунок для аналізу іміджу політика і створення політичного профілю</p>
+      </div>
+      <div class="field">
+        <form action="/analyze" method="POST" id="submit-form">
+          <input type="text" name="name_surname" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''"
+            onblur="this.placeholder = 'Ім\'я Прізвище'">
+          <button>Аналізувати</button>
+        </form>
+      </div>
     </div>
-    <div class="field">
-      <form action="/analyze" method="POST">
-        <input type="text" name="name_surname" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''" onblur="this.placeholder = 'Ім\'я Прізвище'">
-        <button onclick="loading();">Аналізувати</button>   
-      </form>
-    </div>
-    </div>
-    </div>
-  <script></script> 
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $(document).on('submit', '#submit-form', function () {
+        $(".content").hide()
+        $(".animation").fadeIn(1200)
+      });
+    });
+  </script>
+</body>
+
 </html>
