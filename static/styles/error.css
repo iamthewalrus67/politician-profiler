@@ -2,7 +2,7 @@
 body {
   background: #E9EDF0;
   margin: 0;
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 
 .header {
@@ -13,19 +13,30 @@ body {
 
 .information {
   margin: 9em auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: left;
   color: #728AB7;
 }
+
 .information h1 {
   font-size: 3em;
   max-width: 7em;
   text-align: center;
   margin: 0;
 }
+
 .information p {
   font-size: 1.1em;
   font-style: normal;
@@ -49,12 +60,14 @@ button {
   outline: none;
   cursor: pointer;
   color: #728AB7;
-  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+  -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+          box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
 }
 
 button:active {
   color: #728AB7;
-  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
+  -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
+          box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #ffffff73;
 }
 
 @media only screen and (min-width: 800px) {
@@ -62,4 +75,5 @@ button:active {
     margin-left: 5em;
     margin-top: 4em;
   }
-}/*# sourceMappingURL=error.css.map */
+}
+/*# sourceMappingURL=error.css.map */
