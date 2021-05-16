@@ -31,12 +31,12 @@ class Twitter:
         self.latest_tweets = []
 
     def get_bearer_token(self):
-        dir_path = os.path.dirname(__file__)
-        bearer_token_path = os.path.join(dir_path, '../bearer_token')
+        # dir_path = os.path.dirname(__file__)
+        # bearer_token_path = os.path.join(dir_path, '../bearer_token')
 
-        with open(bearer_token_path, 'r') as f:
-            bearer_token = f.read()
-
+        # with open(bearer_token_path, 'r') as f:
+        #     bearer_token = f.read()
+        bearer_token = os.getenv('TwITTER_KEY')
         return bearer_token
 
     def search_user(self, screen_name):
