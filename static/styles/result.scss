@@ -188,6 +188,7 @@ a {
     margin: auto;
     padding-top: 2em;
     padding-bottom: 2em;
+    color: #2a303b;
 }
 
 #line-chart {
@@ -198,7 +199,7 @@ a {
 }
 
 .salary p {
-    font-size: 3.7em;
+    font-size: 2.4em;
     text-align: center;
     color: #2a303b;
     font-weight: bold;
@@ -251,4 +252,7 @@ a {
     #list-features {
         display: flex;
     }
+    .salary p {
+        font-size: 3.7em;
+    } 
 }
