@@ -31,12 +31,7 @@ class Twitter:
         self.latest_tweets = []
 
     def get_bearer_token(self):
-        # dir_path = os.path.dirname(__file__)
-        # bearer_token_path = os.path.join(dir_path, '../bearer_token')
-
-        # with open(bearer_token_path, 'r') as f:
-        #     bearer_token = f.read()
-        bearer_token = os.getenv('TwITTER_KEY')
+        bearer_token = os.environ['TWITTER_KEY']
         return bearer_token
 
     def search_user(self, screen_name):
@@ -65,9 +60,3 @@ class Twitter:
             for tweet in text:
                 tweet = tweet["text"].split("https")
                 self.latest_tweets.append(tweet[0])
-
-# name="Володимир Зеленський"
-# screen_name = get_twitter_id(name)
-# tw = Twitter()
-# tw.get_latest_tweets(screen_name)
-# print(tw.latest_tweets)
