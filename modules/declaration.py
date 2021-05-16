@@ -5,10 +5,15 @@ import pprint
 class Declaration:
     def __init__(self, name):
         self.name = name
-        self.declaration_id = self.get_declaration()['id']
-        self.declaration = self.get_declaration_details()
-        self.salary = self.get_salary()
-        self.link = self.get_declaration_link()
+        declaration = self.get_declaration()
+        if declaration is None:
+            self.link = None
+            self.salary = 0
+        else:
+            self.declaration_id = declaration['id']
+            self.declaration = self.get_declaration_details()
+            self.salary = self.get_salary()
+            self.link = self.get_declaration_link()
 
     def get_declaration(self):
         url = 'https://public-api.nazk.gov.ua/v2/documents/list'

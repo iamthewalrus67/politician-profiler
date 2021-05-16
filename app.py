@@ -43,18 +43,27 @@ def analyze():
     articles = ArticleADT(name).articles
 
     surname = name.split()[0]
-    trends = Trends([surname.lower()])
-    interest = trends.interest_over_time()
-    print(interest)
-    dates = [str(i).split('T')[0]
-             for i in list(interest.index.values)][-20:]
-    popularity_level = interest[surname.lower()].tolist()[-20:]
+    try:
+        trends = Trends([surname.lower()])
+        interest = trends.interest_over_time()
+        dates = [str(i).split('T')[0]
+                 for i in list(interest.index.values)][-20:]
+        popularity_level = interest[surname.lower()].tolist()[-20:]
+    except:
+        dates = ['' for i in range(20)]
+        popularity_level = [0 for i in range(0)]
 
     declaration = Declaration(name)
+    declaration_link = declaration.link
+    declaration_salary_string = '{:,}'.format(
+        declaration.salary).replace(',', ' ')
 
-    screen_name = get_twitter_id(name)
-    tw = Twitter()
-    tw.get_latest_tweets(screen_name)
+    try:
+        screen_name = get_twitter_id(name)
+        tw = Twitter()
+        tw.get_latest_tweets(screen_name)
+    except:
+        tw.latest_tweets = [None for _ in range(5)]
 
     return render_template("result.html", image=wiki_object.links, name=name, politician_description=wiki_object.wiki_desc,
                            desc_1=articles[0][0], link_1=articles[0][1], image_1=articles[0][2],
@@ -64,8 +73,8 @@ def analyze():
                            desc_5=articles[4][0], link_5=articles[4][1], image_5=articles[4][2],
                            popularity_level=popularity_level, dates=dates, absentee=absentee, cheater=cheater, thief=thief,
                            tweeet_1=tw.latest_tweets[0], tweet_2=tw.latest_tweets[1], tweet_3=tw.latest_tweets[2],
-                           tweet_4=tw.latest_tweets[3], tweet_5=tw.latest_tweets[4], declaration_link=declaration.link,
-                           salary='{:,}'.format(declaration.salary).replace(',', ' '))
+                           tweet_4=tw.latest_tweets[3], tweet_5=tw.latest_tweets[4], declaration_link=declaration_link,
+                           salary=declaration_salary_string)
 
 
 if __name__ == "__main__":

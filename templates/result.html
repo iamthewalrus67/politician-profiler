@@ -120,6 +120,7 @@
                 $(document).ready(function () { $('.text-tweets').slick(); });
             </script>
         </div>
+        {% if declaration_link %}
         <div class="salary">
             <h2>Офіційна зарплатня за рік</h2>
             <p>₴{{salary}}</p>
@@ -127,6 +128,7 @@
                 <button class="declaration">Декларація</button>
             </a>
         </div>
+        {% endif %}
         <div class="interest-overtime">
             <h2>Зацікавленість користувачами</h2>
             <div class="chart">
