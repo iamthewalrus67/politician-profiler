@@ -20,7 +20,7 @@ def page():
 def analyze():
     name = request.form["name_surname"]
 
-    if len(name.split(' ')) == 1:
+    if len(name.split(' ')) == 1 or len(set(name.split(' '))) != len(name.split(' ')):
         return render_template("error.html", message="Введіть прізвище та ім'я")
 
     check_if_politicain_exists, name = check_database.check_all_politicians(name)
