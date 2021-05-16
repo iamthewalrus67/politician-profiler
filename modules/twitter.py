@@ -19,15 +19,16 @@ def get_twitter_id(politician_name):
     else:
         twitter_link = twitter_link[20:]
         screen_name = twitter_link.split("?")[0]
-        return twitter_link
+        return screen_name
 
 
 class Twitter:
     def __init__(self):
         self.base_url = 'https://api.twitter.com/1.1/'
         self.headers = {
-            'Authorization': f'Bearer {self.get_bearer_token}'
+            'Authorization': f'Bearer {self.get_bearer_token()}'
         }
+        self.latest_tweets = []
 
     def get_bearer_token(self):
         dir_path = os.path.dirname(__file__)
@@ -50,11 +51,23 @@ class Twitter:
         return response.json()
 
     def get_latest_tweets(self, screen_name):
-        url = self.base_url + 'statuses/user_timeline.json'
-        params = {
-            'screen_name': screen_name,
-            'count': 2
-        }
+        if screen_name is None:
+            self.latest_tweets = [None, None, None, None, None]
+        else:
+            url = self.base_url + 'statuses/user_timeline.json'
+            params = {
+                'screen_name': screen_name,
+                'count': 5
+            }
 
-        response = requests.get(url, headers=self.headers, params=params)
-        return response.json()
+            response = requests.get(url, headers=self.headers, params=params)
+            text = response.json()
+            for tweet in text:
+                tweet = tweet["text"].split("https")
+                self.latest_tweets.append(tweet[0])
+
+# name="Володимир Зеленський"
+# screen_name = get_twitter_id(name)
+# tw = Twitter()
+# tw.get_latest_tweets(screen_name)
+# print(tw.latest_tweets)
