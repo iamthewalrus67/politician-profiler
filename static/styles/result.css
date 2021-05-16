@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+:root {
+  --primary-color: #728AB7;
+}
+
 body {
   background: #E9EDF0;
   margin: 0;
@@ -7,26 +11,20 @@ body {
 
 .header {
   margin: 3em 0em 2em 2em;
-  color: #728AB7;
+  color: var(--primary-color);
   opacity: 50%;
 }
 
 .politician {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .politician h1 {
-  color: #728AB7;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  color: var(--primary-color);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -55,9 +53,6 @@ body {
 .info img {
   padding: 0;
   margin: 2em auto 2em auto;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   border-radius: 2em;
   width: 260px;
   height: 360px;
@@ -70,7 +65,7 @@ body {
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  color: #728AB7;
+  color: var(--primary-color);
   margin-top: 1.5em;
   margin-bottom: 2em;
 }
@@ -88,7 +83,7 @@ body {
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  color: #728AB7;
+  color: var(--primary-color);
   margin-top: 2em;
   margin-bottom: 1em;
 }
@@ -110,13 +105,13 @@ body {
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
           box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-  color: #728AB7;
+  color: var(--primary-color);
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
-  color: #728AB7;
+  color: var(--primary-color);
 }
 
 .descr {
@@ -157,14 +152,14 @@ a {
 }
 
 .tweet {
-  margin: 1.2em;
+  margin: 1.6em;
   width: 350px;
   height: 200px;
   border-radius: 2em;
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
           box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-  color: #728AB7;
+  color: var(--primary-color);
 }
 
 .text-tweets {
@@ -183,7 +178,6 @@ a {
 }
 
 #line-chart {
-  background-color: blue;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -194,7 +188,7 @@ a {
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   -webkit-box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
           box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-  color: #728AB7;
+  color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -205,7 +199,7 @@ a {
 .footer {
   padding: 5em;
   text-align: center;
-  color: #728AB7;
+  color: var(--primary-color);
 }
 
 @media only screen and (min-width: 900px) {
