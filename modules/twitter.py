@@ -4,6 +4,22 @@ Module for working with Twitter API.
 
 import requests
 import os
+from googlesearch import search
+
+
+def get_twitter_id(politician_name):
+    """Returns politician`s Twitter screen name or None if a politician
+    does not have a Twitter sccount."""
+    query = politician_name + " твіттер"
+    for result in search(query, tld="co.in", num=3, stop=1, pause=2):
+        twitter_link = result
+
+    if "twitter.com" not in twitter_link:
+        return None
+    else:
+        twitter_link = twitter_link[20:]
+        screen_name = twitter_link.split("?")[0]
+        return twitter_link
 
 
 class Twitter:

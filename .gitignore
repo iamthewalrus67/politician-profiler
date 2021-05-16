@@ -137,4 +137,7 @@ dmypy.json
 # Keys and other important stuff
 bearer_token
 
+.google-cookie
+
 .idea/
+
