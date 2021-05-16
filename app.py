@@ -25,7 +25,8 @@ def analyze():
 
     trends = Trends([name.lower()])
     interest = trends.interest_over_time()
-    dates = [str(i).split('T')[0] for i in list(interest.index.values)][-20:]
+    dates = [str(i).split('T')[0]
+             for i in list(interest.index.values)][-20:]
     popularity_level = interest[name.lower()].tolist()[-20:]
 
     return render_template("result.html", image=wiki_object.links[1], name=name, politician_description=wiki_object.wiki_desc,

@@ -147,20 +147,31 @@
 
         var options = {
             legend: {
-                display: true,
-                position: 'top',
-                labels: {
-                    boxWidth: 80,
-                    fontColor: 'black'
-                }
-
+                    display: false,
+                    labels: {
+                        display: false
+                        }
+                },
+            title: {
+                display: false
+            },
+            tooltips: {
+                displayColors:false,
             },
             responsive: true,
             maintainAspectRatio: false,
             scales: {
                 y: {
+                    grid: {
+                        display: false
+                    },
                     beginAtZero: true
                 },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
             },
             animations: {
                 y: {
