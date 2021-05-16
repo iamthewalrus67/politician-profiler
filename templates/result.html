@@ -86,13 +86,13 @@
             {% if tweet_2 %}
             <h2>Висловлювання у Twitter</h2>
             <div class="text-tweets">
-                <div class="tweet">
+                <!-- <div class="tweet">
                     {% if tweet_1 %}
                     <a href={{twitter_link_1}}>
                         <p class="tweet_text">{{ tweet_1 }}</p>
                     </a>
                     {% endif %}
-                </div>
+                </div> -->
                 <div class="tweet">
                     {% if tweet_2 %}
                     <a href={{twitter_link_2}}>
@@ -150,8 +150,8 @@
     <div class="footer">
         <p>© Roman Kulyk, Vira Salieva, Bohdan Ruban, Vladyslav Vasylevych<br>Lviv, 2021</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript">
         lineChartCanvas = document.getElementById('line-chart')
 
         popularityData = {{ popularity_level | tojson }};
