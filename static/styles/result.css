@@ -237,6 +237,8 @@ a {
   margin: auto;
   height: 15em;
   width: 28em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .footer {
