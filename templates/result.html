@@ -8,11 +8,11 @@
     <link rel="stylesheet" href='static/styles/result.css'>
     <link rel="stylesheet" type="text/css" href="static/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Politician Profiler</title>
@@ -35,7 +35,6 @@
                         <li>{{ absentee }} Прогульник</li>
                         <li>{{ thief }} Корупціонер</li>
                     </ul>
-                    <button class="declaration" href="#">Декларація</button>
                 </div>
                 <img src={{image}}>
             </div>
@@ -116,6 +115,11 @@
             <script type="text/javascript">
                 $(document).ready(function () { $('.text-tweets').slick(); });
             </script>
+        </div>
+        <div class="salary">
+            <h2>Офіційна зарплатня за рік</h2>
+            <p>₴460 000</p>
+            <button class="declaration" href="#">Декларація</button>
         </div>
         <div class="interest-overtime">
             <h2>Зацікавленість користувачами</h2>

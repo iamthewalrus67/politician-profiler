@@ -18,7 +18,6 @@ def page():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     name = request.form["name_surname"]
-    print(name)
 
     check_if_politicain_exists = check_database.check_all_politicians(name)
     if check_if_politicain_exists is False:
