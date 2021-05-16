@@ -31,9 +31,17 @@
                 <div class="text-info">
                     <p>{{politician_description}}</p>
                     <ul id='list-features'>
-                        <li>{{ cheater }} Кнопкодавить</li>
-                        <li>{{ absentee }} Прогульник</li>
-                        <li>{{ thief }} Корупціонер</li>
+                        {% if cheater %}
+                            <li>{{ cheater }} Кнопкодавить</li>
+                        {% endif %}
+
+                        {% if absentee %}
+                            <li>{{ absentee }} Прогульник</li>
+                        {% endif %}
+
+                        {% if thief %}
+                            <li>{{ thief }} Корупціонер</li>
+                        {% endif %}
                     </ul>
                     <button class="declaration" href="#">Декларація</button>
                 </div>
