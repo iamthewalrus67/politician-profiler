@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect
 from ArticleADT import ArticleADT
 from WikiADT import WikiADT
 from modules.trends import Trends
+from modules import check_database
 
 app = Flask(__name__)
 
@@ -17,6 +18,19 @@ def page():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     name = request.form["name_surname"]
+
+    check_if_politicain_exists = check_database.check_all_politicians(name)
+    if check_if_politicain_exists is False:
+        return render_template('error.html')
+
+    vorishki, progulshiki, knopkodavu = check_database.check_politician(name)
+    thief, absentee, cheater = "❌", "❌", "❌"
+    if vorishki:
+        thief = "✅"
+    if progulshiki:
+        absentee = "✅"
+    if knopkodavu:
+        cheater = "✅"
 
     wiki_object = WikiADT(name)
 
@@ -33,7 +47,8 @@ def analyze():
                            desc_2=articles[1][0], link_2=articles[1][1],
                            desc_3=articles[2][0], link_3=articles[2][1],
                            desc_4=articles[3][0], link_4=articles[3][1],
-                           desc_5=articles[4][0], link_5=articles[4][1], popularity_level=popularity_level, dates=dates)
+                           desc_5=articles[4][0], link_5=articles[4][1], popularity_level=popularity_level, dates=dates,
+                           absentee=absentee, cheater=cheater, thief=thief)
 
 
 if __name__ == "__main__":

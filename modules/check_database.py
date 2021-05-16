@@ -43,3 +43,7 @@ def check_vorishki(name: str):
             if names.issubset(words):
                 return True
         return False
+
+
+def check_politician(name: str):
+    return check_vorishki(name), check_progulshiki(name), check_knopkodavu(name)
