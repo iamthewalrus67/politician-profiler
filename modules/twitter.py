@@ -1,7 +1,6 @@
 '''
 Module for working with Twitter API.
 '''
-
 import requests
 import os
 from googlesearch import search
@@ -13,7 +12,6 @@ def get_twitter_id(politician_name):
     query = politician_name + " твіттер"
     for result in search(query, tld="co.in", num=3, stop=1, pause=2):
         twitter_link = result
-
     if "twitter.com" not in twitter_link:
         return None
     else:
@@ -31,12 +29,12 @@ class Twitter:
         self.latest_tweets = []
 
     def get_bearer_token(self):
-        dir_path = os.path.dirname(__file__)
-        bearer_token_path = os.path.join(dir_path, '../bearer_token')
-
-        with open(bearer_token_path, 'r') as f:
-            bearer_token = f.read()
-
+        # dir_path = os.path.dirname(__file__)
+        # bearer_token_path = os.path.join(dir_path, '../bearer_token')
+        # with open(bearer_token_path, 'r') as f:
+        #     bearer_token = f.read()
+        # return bearer_token
+        bearer_token = os.environ['TWITTER_KEY']
         return bearer_token
 
     def search_user(self, screen_name):
@@ -44,10 +42,8 @@ class Twitter:
         params = {
             'screen_name': screen_name
         }
-
         response = requests.get(
             url, headers=self.headers, params=params)
-
         return response.json()
 
     def get_latest_tweets(self, screen_name):
@@ -59,15 +55,10 @@ class Twitter:
                 'screen_name': screen_name,
                 'count': 5
             }
-
             response = requests.get(url, headers=self.headers, params=params)
             text = response.json()
+            # print(self.latest_tweets[0]["entities"]["urls"][0]["url"])
             for tweet in text:
-                tweet = tweet["text"].split("https")
-                self.latest_tweets.append(tweet[0])
-
-# name="Володимир Зеленський"
-# screen_name = get_twitter_id(name)
-# tw = Twitter()
-# tw.get_latest_tweets(screen_name)
-# print(tw.latest_tweets)
+                link = tweet["entities"]["urls"][0]["url"]
+                content = tweet["text"].split("https")
+                self.latest_tweets.append([content[0], link])
