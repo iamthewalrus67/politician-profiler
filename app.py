@@ -46,13 +46,14 @@ def analyze():
     declaration = Declaration(name)
 
     return render_template("result.html", image=wiki_object.links[1], name=name, politician_description=wiki_object.wiki_desc,
-                           desc_1=articles[0][0], link_1=articles[0][1],
-                           desc_2=articles[1][0], link_2=articles[1][1],
-                           desc_3=articles[2][0], link_3=articles[2][1],
-                           desc_4=articles[3][0], link_4=articles[3][1],
-                           desc_5=articles[4][0], link_5=articles[4][1], popularity_level=popularity_level, dates=dates,
+                           desc_1=articles[0][0], link_1=articles[0][1], image_1=articles[0][2],
+                           desc_2=articles[1][0], link_2=articles[1][1], image_2=articles[1][2],
+                           desc_3=articles[2][0], link_3=articles[2][1], image_3=articles[2][2],
+                           desc_4=articles[3][0], link_4=articles[3][1], image_4=articles[3][2],
+                           desc_5=articles[4][0], link_5=articles[4][1], image_5=articles[4][2], popularity_level=popularity_level, dates=dates,
                            absentee=absentee, cheater=cheater, thief=thief, declaration_link=declaration.link,
                            salary='{:,}'.format(declaration.salary).replace(',', ' '))
+
 
 
 if __name__ == "__main__":
