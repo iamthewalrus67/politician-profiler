@@ -31,11 +31,18 @@
                 <div class="text-info">
                     <p>{{politician_description}}</p>
                     <ul id='list-features'>
-                        <li>✅ Кнопкодавить</li>
-                        <li>❌ Прогульник</li>
-                        <li>❌ Корупціонер</li>
+                        {% if cheater %}
+                            <li>{{ cheater }} Кнопкодавить</li>
+                        {% endif %}
+
+                        {% if absentee %}
+                            <li>{{ absentee }} Прогульник</li>
+                        {% endif %}
+
+                        {% if thief %}
+                            <li>{{ thief }} Корупціонер</li>
+                        {% endif %}
                     </ul>
-                    <button class="declaration" href="#">Декларація</button>
                 </div>
                 <img src={{image}}>
             </div>
@@ -116,6 +123,11 @@
             <script type="text/javascript">
                 $(document).ready(function () { $('.text-tweets').slick(); });
             </script>
+        </div>
+        <div class="salary">
+            <h2>Офіційна зарплатня за рік</h2>
+            <p>₴460 000</p>
+            <button class="declaration" href="#">Декларація</button>
         </div>
         <div class="interest-overtime">
             <h2>Зацікавленість користувачами</h2>
