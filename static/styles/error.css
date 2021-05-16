@@ -11,6 +11,11 @@ body {
   opacity: 50%;
 }
 
+.header a {
+  text-decoration: none;
+  color: #728AB7;
+}
+
 .information {
   margin: 9em auto 0 auto;
   display: -webkit-box;

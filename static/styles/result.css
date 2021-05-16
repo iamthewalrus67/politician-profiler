@@ -68,6 +68,8 @@ body {
   color: var(--primary-color);
   margin-top: 1.5em;
   margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .declaration {
@@ -119,6 +121,8 @@ body {
   color: var(--primary-color);
   margin-top: 2em;
   margin-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .bars {
@@ -156,9 +160,8 @@ a {
   padding-left: 4.5em;
   padding-right: 4.5em;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -225,18 +228,20 @@ a {
 }
 
 .salary p {
-  font-size: 4em;
+  font-size: 3.7em;
   text-align: center;
   color: #2a303b;
   font-weight: bold;
   opacity: 0.75;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .chart {
   text-align: center;
   margin: auto;
   height: 15em;
-  width: 28em;
+  width: 20em;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -275,6 +280,11 @@ a {
   }
   .twitter {
     margin-bottom: 5em;
+  }
+  #list-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=result.css.map */
