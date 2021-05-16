@@ -32,15 +32,15 @@
                     <p>{{politician_description}}</p>
                     <ul id='list-features'>
                         {% if cheater %}
-                            <li>{{ cheater }} Кнопкодавить</li>
+                        <li>{{ cheater }} Кнопкодавить</li>
                         {% endif %}
 
                         {% if absentee %}
-                            <li>{{ absentee }} Прогульник</li>
+                        <li>{{ absentee }} Прогульник</li>
                         {% endif %}
 
                         {% if thief %}
-                            <li>{{ thief }} Корупціонер</li>
+                        <li>{{ thief }} Корупціонер</li>
                         {% endif %}
                     </ul>
                 </div>
@@ -126,8 +126,10 @@
         </div>
         <div class="salary">
             <h2>Офіційна зарплатня за рік</h2>
-            <p>₴460 000</p>
-            <button class="declaration" href="#">Декларація</button>
+            <p>₴{{salary}}</p>
+            <a href={{declaration_link}} target="_blank" rel="noopener noreferrer">
+                <button class="declaration">Декларація</button>
+            </a>
         </div>
         <div class="interest-overtime">
             <h2>Зацікавленість користувачами</h2>
@@ -159,16 +161,16 @@
 
         var options = {
             legend: {
-                    display: false,
-                    labels: {
-                        display: false
-                        }
-                },
+                display: false,
+                labels: {
+                    display: false
+                }
+            },
             title: {
                 display: false
             },
             tooltips: {
-                displayColors:false,
+                displayColors: false,
             },
             responsive: true,
             maintainAspectRatio: false,

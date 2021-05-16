@@ -1,4 +1,5 @@
 import requests
+import pprint
 
 
 class Declaration:
@@ -34,3 +35,7 @@ class Declaration:
                 total_income += int(source['sizeIncome'])
 
         return total_income
+
+
+# declaration = Declaration("Юлія Тимошенко").get_declaration()
+# print(declaration['data'][0]['data']['step_1']['data']['workPost'])
