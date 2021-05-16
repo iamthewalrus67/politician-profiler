@@ -58,8 +58,7 @@
                 </div>
                 <div class="news">
                     <a href={{link_2}}>
-                        <img class="photo"
-                            src={{image_2}}>
+                        <img class="photo" src={{image_2}}>
                         <p class="descr">{{desc_2}}</p>
                     </a>
                 </div>
@@ -86,29 +85,29 @@
         <div class="twitter">
             <h2>Висловлювання у Twitter про Україну</h2>
             <div class="text-tweets">
-                <div class="tweet">
+                <!-- <div class="tweet">
                     {% if tweet_1 %}
-                        <p class="tweet_text">{{ tweet_1 }}</p>
+                    <p class="tweet_text">{{ tweet_1 }}</p>
                     {% endif %}
-                </div>
+                </div> -->
                 <div class="tweet">
                     {% if tweet_2 %}
-                        <p class="tweet_text">{{ tweet_2 }}</p>
+                    <p class="tweet_text">{{ tweet_2 }}</p>
                     {% endif %}
                 </div>
                 <div class="tweet">
                     {% if tweet_3 %}
-                        <p class="tweet_text">{{ tweet_3 }}</p>
+                    <p class="tweet_text">{{ tweet_3 }}</p>
                     {% endif %}
                 </div>
                 <div class="tweet">
-                    {%  if tweet_4 %}
-                        <p class="tweet_text">{{ tweet_4 }}</p>
+                    {% if tweet_4 %}
+                    <p class="tweet_text">{{ tweet_4 }}</p>
                     {% endif %}
                 </div>
                 <div class="tweet">
-                    {% if tweet_5 is not None %}
-                        <p class="tweet_text">{{ tweet_5 }}</p>
+                    {% if tweet_5 %}
+                    <p class="tweet_text">{{ tweet_5 }}</p>
                     {% endif %}
                 </div>
             </div>
