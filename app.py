@@ -24,13 +24,13 @@ def analyze():
         return render_template('error.html')
 
     vorishki, progulshiki, knopkodavu = check_database.check_politician(name)
-    thief, absentee, cheater = "❌", "❌", "❌"
+    thief, absentee, cheater = "", "", ""
     if vorishki:
-        thief = "✅"
+        thief = "❌"
     if progulshiki:
-        absentee = "✅"
+        absentee = "❌"
     if knopkodavu:
-        cheater = "✅"
+        cheater = "❌"
 
     wiki_object = WikiADT(name)
 
