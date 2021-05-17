@@ -10,7 +10,25 @@ A website for analyzing reputation of Ukrainian politicians.
 
 ## Description
 
-Project is made for citizens who want to...
+Project is made for citizens who want to know whether ukrainian politicians are honest and commited to their work. Such problem is highly important especially in Ukraine, so the app is brought to users to help them decide who to vote for on elections and just for regular politican's reputation monitoring.
+
+By using our website, you will:
+* get short politician's bio
+* be informed if the politician is buttonmasher, corrupt or absentee
+* check latest news headlines related to this politician with photos
+* check latest publications in Twitter
+* сheck officially declarated annual income and declaration
+* see bar chart representing interest in a political figure
+
+## Visual representation
+
+[Start page](images/1.png)
+[Loadong page](images/2.png)
+[Result page](images/3.png)
+[Result page](images/4.png)
+[Result page](images/5.png)
+[Error page](images/6.png)
+[Error page](images/7.png)
 
 ## Wiki pages
 
