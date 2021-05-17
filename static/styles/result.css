@@ -117,10 +117,6 @@ body {
   margin-bottom: 2em;
 }
 
-.twitter {
-  margin-bottom: 8.5em;
-}
-
 .twitter h2 {
   letter-spacing: 0.02em;
   font-style: normal;
@@ -290,9 +286,6 @@ a {
   }
   .tweet_text {
     width: 450px;
-  }
-  .twitter {
-    margin-bottom: 5em;
   }
   #list-features {
     display: -webkit-box;
