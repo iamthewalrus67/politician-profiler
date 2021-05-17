@@ -82,53 +82,19 @@
                 </div>
             </div>
         </div>
+        {% if tweets %}
         <div class="twitter">
-            {% if tweet_2 %}
             <h2>Висловлювання у Twitter</h2>
             <div class="text-tweets">
-                <!-- <div class="tweet">
-                    {% if tweet_1 %}
-                    <a href={{twitter_link_1}}>
-                        <p class="tweet_text">{{ tweet_1 }}</p>
-                    </a>
-                    {% endif %}
-                </div> -->
+                {% for tweet in tweets %}
                 <div class="tweet">
-                    {% if tweet_2 %}
-                    <a href={{twitter_link_2}}>
-                        <p class="tweet_text">{{ tweet_2 }}</p>
+                    <a href={{ tweet[1] }} target="_blank" rel="noopener noreferrer">
+                        <p class="tweet_text">{{ tweet[0] }}</p>
                     </a>
-                    {% endif %}
                 </div>
-                <div class="tweet">
-                    {% if tweet_3 %}
-                    <a href={{twitter_link_3}}>
-                        <p class="tweet_text">{{ tweet_3 }}</p>
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="tweet">
-                    {% if tweet_4 %}
-                    <a href={{twitter_link_4}}>
-                        <p class="tweet_text">{{ tweet_4 }}</p>
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="tweet">
-                    {% if tweet_5 %}
-                    <a href={{twitter_link_5}}>
-                        <p class="tweet_text">{{ tweet_5 }}</p>
-                    </a>
-                    {% endif %}
-                </div>
+                {% endfor %}
             </div>
             {% endif %}
-            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-            <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script type="text/javascript" src="static/slick/slick.min.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function () { $('.text-tweets').slick(); });
-            </script>
         </div>
         {% if declaration_link %}
         <div class="salary">
@@ -150,8 +116,14 @@
     <div class="footer">
         <p>© Roman Kulyk, Vira Salieva, Bohdan Ruban, Vladyslav Vasylevych<br>Lviv, 2021</p>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="static/slick/slick.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function () { $('.text-tweets').slick(); });
+    </script>
+    <script>
         lineChartCanvas = document.getElementById('line-chart')
 
         popularityData = {{ popularity_level | tojson }};

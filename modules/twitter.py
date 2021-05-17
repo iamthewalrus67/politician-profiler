@@ -41,19 +41,30 @@ class Twitter:
             url, headers=self.headers, params=params)
         return response.json()
 
-    def get_latest_tweets(self, screen_name):
+    def get_latest_tweets(self, screen_name, number=5):
         if screen_name is None:
             self.latest_tweets = [None, None, None, None, None]
         else:
             url = self.base_url + 'statuses/user_timeline.json'
             params = {
                 'screen_name': screen_name,
-                'count': 5
+                'count': number
             }
             response = requests.get(url, headers=self.headers, params=params)
             text = response.json()
             # print(self.latest_tweets[0]["entities"]["urls"][0]["url"])
             for tweet in text:
-                link = tweet["entities"]["urls"][0]["url"]
-                content = tweet["text"].split("https")
-                self.latest_tweets.append([content[0], link])
+                try:
+                    link = tweet["entities"]["urls"][0]["url"]
+                    content = tweet["text"].split("https")
+                    self.latest_tweets.append([content[0], link])
+                except IndexError:
+                    continue
+
+
+# tw = Twitter()
+# screen_name = get_twitter_id('Кива Ілля')
+# print(screen_name)
+# print(tw.get_latest_tweets(screen_name, number=10))
+# print(tw.latest_tweets)
+# print(len(tw.latest_tweets))
