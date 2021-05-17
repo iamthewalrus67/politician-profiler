@@ -22,12 +22,24 @@ By using our website, you will:
 
 ## Visual representation
 
+Start page
 ![Start page](images/1.png)
+
+Loadong page
 ![Loadong page](images/2.png)
+
+Result page
 ![Result page](images/3.png)
+
+Result page
 ![Result page](images/4.png)
+
+Result page
 ![Result page](images/5.png)
+
+Error page
 ![Error page](images/6.png)
+Error page
 ![Error page](images/7.png)
 
 ## Wiki pages
