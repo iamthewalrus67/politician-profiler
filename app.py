@@ -1,7 +1,6 @@
-from WikiADT import WikiADT
 from flask import Flask, render_template, request, redirect
-from ArticleADT import ArticleADT
-from WikiADT import WikiADT
+from modules.article import ArticleADT
+from modules.wiki import WikiADT
 from modules.twitter import get_twitter_id, Twitter
 from modules.trends import Trends
 from modules import check_database
