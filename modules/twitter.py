@@ -43,7 +43,7 @@ class Twitter:
 
     def get_latest_tweets(self, screen_name, number=5):
         if screen_name is None:
-            self.latest_tweets = [None, None, None, None, None]
+            self.latest_tweets = None  # [None, None, None, None, None]
         else:
             url = self.base_url + 'statuses/user_timeline.json'
             params = {
@@ -57,7 +57,8 @@ class Twitter:
                 try:
                     link = tweet["entities"]["urls"][0]["url"]
                     content = tweet["text"].split("https")
-                    self.latest_tweets.append([content[0], link])
+                    if content[0]:
+                        self.latest_tweets.append([content[0], link])
                 except IndexError:
                     continue
 
