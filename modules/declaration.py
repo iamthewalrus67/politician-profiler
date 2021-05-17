@@ -39,8 +39,12 @@ class Declaration:
         income_sources = self.declaration['data']['step_11']['data']
         total_income = 0
         for source in income_sources:
-            if source['person_who_care'][0]['person'] == '1':
-                total_income += int(source['sizeIncome'])
+            try:
+                if source['person_who_care'][0]['person'] == '1':
+                    total_income += int(source['sizeIncome'])
+            except KeyError:
+                if source['person'] == '1':
+                    total_income += int(source['sizeIncome'])
 
         return total_income
 
