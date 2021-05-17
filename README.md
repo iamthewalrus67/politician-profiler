@@ -1,9 +1,12 @@
 # Politician Profiler
 
-A website for analyzing reputation of Ukrainian politicians.
+A [website](https://politician-profiler.herokuapp.com/) for analyzing reputation of Ukrainian politicians.
 
 ## Table of contents:
 * [Description](#description)
+* [Visual representation](#visual-representation)
+* [Wiki pages](#wiki-pages)
+* [Usage](#usage)
 * [Contributing](#contributing)
 * [Credits](#credits)
 * [License](#license)
@@ -22,13 +25,22 @@ By using our website, you will:
 
 ## Visual representation
 
-[Start page](images/1.png)
-[Loadong page](images/2.png)
-[Result page](images/3.png)
-[Result page](images/4.png)
-[Result page](images/5.png)
-[Error page](images/6.png)
-[Error page](images/7.png)
+#### Start page
+![Start page](images/1.png)
+#### Loading page
+![Loading page](images/2.png)
+#### Result page
+![Result page](images/3.png)
+#### Result page
+![Result page](images/4.png)
+#### Result page
+![Result page](images/5.png)
+#### Error page
+![Error page](images/6.png)
+#### Error page
+![Error page](images/7.png)
+#### Video presentation
+[Click here](https://youtu.be/YCokSiGB-GQ)
 
 ## Wiki pages
 
@@ -36,11 +48,13 @@ By using our website, you will:
 * [Homework 1](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№1)
 * [Homework 2](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№2)
 * [Homework 3](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№3)
-* [Homework 4]()
+* [Homework 4](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№4)
+* [Homework 5](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№5)
 
 
-## Web application
+## Usage
 
+Follow the [link](https://politician-profiler.herokuapp.com/) or clone repository locally and run app.py. Enjoy!
 
 ## Contributing
 
