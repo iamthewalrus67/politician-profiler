@@ -22,13 +22,13 @@ By using our website, you will:
 
 ## Visual representation
 
-[Start page](images/1.png)
-[Loadong page](images/2.png)
-[Result page](images/3.png)
-[Result page](images/4.png)
-[Result page](images/5.png)
-[Error page](images/6.png)
-[Error page](images/7.png)
+![Start page](images/1.png)
+![Loadong page](images/2.png)
+![Result page](images/3.png)
+![Result page](images/4.png)
+![Result page](images/5.png)
+![Error page](images/6.png)
+![Error page](images/7.png)
 
 ## Wiki pages
 
@@ -36,7 +36,8 @@ By using our website, you will:
 * [Homework 1](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№1)
 * [Homework 2](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№2)
 * [Homework 3](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№3)
-* [Homework 4]()
+* [Homework 4](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№4)
+* [Homework 5](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№5)
 
 
 ## Web application
