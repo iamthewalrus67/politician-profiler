@@ -1,0 +1,56 @@
+Welcome to politician-profiler documentation!
+=============================
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+
+Twitter API
+=============================
+
+.. automodule:: modules.twitter
+   :members:
+
+
+Trends ADT
+=============================
+
+.. automodule:: modules.trends
+   :members:
+
+
+Declaration ADT
+=============================
+
+.. automodule:: modules.declaration
+   :members:
+
+
+Database
+=============================
+
+.. automodule:: modules.check_database
+   :members:
+
+
+Wiki ADT
+=============================
+
+.. automodule:: modules.wiki
+   :members:
+
+
+Article ADT
+=============================
+
+.. automodule:: modules.article
+   :members:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
