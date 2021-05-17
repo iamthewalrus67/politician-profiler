@@ -1,8 +1,16 @@
+'''
+Module for checking politicians for corruption.
+'''
+
 import os
 
 
 def check_all_politicians(name: str):
-    path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../database/all_politicians.txt'))
+    '''
+    Check if person is a politician.
+    '''
+    path = os.path.normpath(os.path.join(os.path.dirname(
+        __file__), '../database/all_politicians.txt'))
     with open(path, encoding='utf-8') as file:
         for line in file:
             names = set(name.lower().strip().split(' '))
@@ -13,7 +21,11 @@ def check_all_politicians(name: str):
 
 
 def check_knopkodavu(name: str):
-    path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../database/knopkodavy.txt'))
+    '''
+    Check if politician is a button masher.
+    '''
+    path = os.path.normpath(os.path.join(
+        os.path.dirname(__file__), '../database/knopkodavy.txt'))
     with open(path, encoding='utf-8') as file:
         for line in file:
             names = set(name.lower().strip().split(' '))
@@ -24,7 +36,11 @@ def check_knopkodavu(name: str):
 
 
 def check_progulshiki(name: str):
-    path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../database/progulshiki.txt'))
+    '''
+    Check if politician skips meetings.
+    '''
+    path = os.path.normpath(os.path.join(
+        os.path.dirname(__file__), '../database/progulshiki.txt'))
     with open(path, encoding='utf-8') as file:
         for line in file:
             names = set(name.lower().strip().split(' '))
@@ -35,7 +51,11 @@ def check_progulshiki(name: str):
 
 
 def check_vorishki(name: str):
-    path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../database/vorishki.txt'))
+    '''
+    Check if politician has been involved in corruption schemes.
+    '''
+    path = os.path.normpath(os.path.join(
+        os.path.dirname(__file__), '../database/vorishki.txt'))
     with open(path, encoding='utf-8') as file:
         for line in file:
             names = set(name.lower().strip().split(' '))
@@ -46,4 +66,7 @@ def check_vorishki(name: str):
 
 
 def check_politician(name: str):
+    '''
+    Check politician for all three points.
+    '''
     return check_vorishki(name), check_progulshiki(name), check_knopkodavu(name)

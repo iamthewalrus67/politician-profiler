@@ -1,3 +1,7 @@
+'''
+Main module of application.
+'''
+
 from flask import Flask, render_template, request, redirect
 from modules.article import ArticleADT
 from modules.wiki import WikiADT

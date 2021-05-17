@@ -21,7 +21,14 @@ def get_twitter_id(politician_name):
 
 
 class Twitter:
+    '''
+    Class for working with Twitter API.
+    '''
+
     def __init__(self):
+        '''
+        Initialize Twitter object.
+        '''
         self.base_url = 'https://api.twitter.com/1.1/'
         self.headers = {
             'Authorization': f'Bearer {self.get_bearer_token()}'
@@ -29,10 +36,16 @@ class Twitter:
         self.latest_tweets = []
 
     def get_bearer_token(self):
+        '''
+        Get bearer token from environment variable.
+        '''
         bearer_token = os.environ['TWITTER_KEY']
         return bearer_token
 
     def search_user(self, screen_name):
+        '''
+        Get user by nickname. 
+        '''
         url = self.base_url + 'users/lookup.json'
         params = {
             'screen_name': screen_name
@@ -42,6 +55,9 @@ class Twitter:
         return response.json()
 
     def get_latest_tweets(self, screen_name, number=5):
+        '''
+        Get latest tweets of user.
+        '''
         if screen_name is None:
             self.latest_tweets = None  # [None, None, None, None, None]
         else:
