@@ -1,6 +1,6 @@
 # Politician Profiler
 
-A website for analyzing reputation of Ukrainian politicians.
+A [website](https://politician-profiler.herokuapp.com/) for analyzing reputation of Ukrainian politicians.
 
 ## Table of contents:
 * [Description](#description)
@@ -22,25 +22,29 @@ By using our website, you will:
 
 ## Visual representation
 
-Start page
+#### Start page
 ![Start page](images/1.png)
 
-Loadong page
-![Loadong page](images/2.png)
+#### Loading page
+![Loading page](images/2.png)
 
-Result page
+#### Result page
 ![Result page](images/3.png)
 
-Result page
+#### Result page
 ![Result page](images/4.png)
 
-Result page
+#### Result page
 ![Result page](images/5.png)
 
-Error page
+#### Error page
 ![Error page](images/6.png)
-Error page
+
+#### Error page
 ![Error page](images/7.png)
+
+#### Video presentation
+[Click here](https://youtu.be/YCokSiGB-GQ)
 
 ## Wiki pages
 
