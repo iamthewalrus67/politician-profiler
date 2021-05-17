@@ -4,6 +4,9 @@ A [website](https://politician-profiler.herokuapp.com/) for analyzing reputation
 
 ## Table of contents:
 * [Description](#description)
+* [Visual representation](#visual_representation)
+* [Wiki pages](#wiki_pages)
+* [Usage](#usage)
 * [Contributing](#contributing)
 * [Credits](#credits)
 * [License](#license)
