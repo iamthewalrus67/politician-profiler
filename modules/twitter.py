@@ -52,7 +52,6 @@ class Twitter:
             }
             response = requests.get(url, headers=self.headers, params=params)
             text = response.json()
-            # print(self.latest_tweets[0]["entities"]["urls"][0]["url"])
             for tweet in text:
                 try:
                     link = tweet["entities"]["urls"][0]["url"]
@@ -61,11 +60,3 @@ class Twitter:
                         self.latest_tweets.append([content[0], link])
                 except IndexError:
                     continue
-
-
-# tw = Twitter()
-# screen_name = get_twitter_id('Кива Ілля')
-# print(screen_name)
-# print(tw.get_latest_tweets(screen_name, number=10))
-# print(tw.latest_tweets)
-# print(len(tw.latest_tweets))

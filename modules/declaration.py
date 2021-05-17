@@ -1,5 +1,4 @@
 import requests
-import pprint
 
 
 class Declaration:
@@ -47,12 +46,3 @@ class Declaration:
                     total_income += int(source['sizeIncome'])
 
         return total_income
-
-
-# declaration = Declaration("Петро Порошенко").get_declaration()
-# print(pprint.pprint(declaration['data'][0]))
-# print()
-# print(pprint.pprint(declaration['data'][3]))
-# print(declaration['data'][0]['data']['step_0']['data']['declaration_type'])
-# print(declaration['data'][4]['declaration_type'])
-# print(declaration['data'][0]['data']['step_1']['data']['workPost'])

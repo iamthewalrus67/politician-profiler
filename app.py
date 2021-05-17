@@ -74,8 +74,6 @@ def analyze():
                            desc_4=articles[3][0], link_4=articles[3][1], image_4=articles[3][2],
                            desc_5=articles[4][0], link_5=articles[4][1], image_5=articles[4][2],
                            popularity_level=popularity_level, dates=dates, absentee=absentee, cheater=cheater, thief=thief,
-                           #    tweeet_1=tw.latest_tweets[0], tweet_2=tw.latest_tweets[1], tweet_3=tw.latest_tweets[2],
-                           #    tweet_4=tw.latest_tweets[3], tweet_5=tw.latest_tweets[4],
                            tweets=latest_tweets,
                            declaration_link=declaration_link,
                            salary=declaration_salary_string)

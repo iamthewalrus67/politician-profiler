@@ -30,7 +30,7 @@
       </div>
       <div class="field">
         <form action="/analyze" method="POST" id="submit-form">
-          <input type="text" name="name_surname" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''"
+          <input autocomplete="off" type="text" name="name_surname" required placeholder="Ім'я Прізвище" onfocus="this.placeholder=''"
             onblur="this.placeholder = 'Ім\'я Прізвище'">
           <button>Аналізувати</button>
         </form>
@@ -40,18 +40,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script>
-    // $(document).ready(function () {
-    //   var form = $("#submit-form");
-    //   form.on('submit', function (e) {
-    //     e.preventDefault();
-
-    //     setTimeout(function () {
-    //       $(".content").hide()
-    //       $(".animation").fadeIn(1200)
-    //     }, 500);
-
-    //   });
-    // });
     $(document).ready(function () {
       $(document).on('submit', '#submit-form', function () {
         $(".content").hide();
