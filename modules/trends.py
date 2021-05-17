@@ -31,23 +31,3 @@ class Trends:
 
     def suggestions(self, keyword):
         return self.pytrends.suggestions(keyword)
-
-
-# if __name__ == '__main__':
-    # trends = Trends(['Зеленський', 'Zelensky', 'Trump'])
-    # trends = Trends(['порошенко'])
-    # trends = Trends(['медведчук'])
-    # interest = trends.interest_over_time()
-    # print(interest)
-    # print(trends.interest_by_region())
-    # print(trends.related_topics())
-    # print(trends.related_querries())
-    # print(trends.trending_searches())
-    # print(trends.suggestions('зеленський'))
-    # dates = [str(i).split('T')[0] for i in list(interest.index.values)]
-    # print(dates)
-    # print(interest)
-    # print(interest['медведчук'].tolist())
-    # print(interest['Name'])
-    # print(trends.trending_searches('ukraine'))
-    # print(trends.top_charts(202012))

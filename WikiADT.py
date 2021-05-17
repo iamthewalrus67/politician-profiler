@@ -1,7 +1,6 @@
 """Module with WikiADT class for extracting politician`s image and description."""
 import wikipedia
 from bs4 import BeautifulSoup
-import requests
 
 
 class WikiADT():
