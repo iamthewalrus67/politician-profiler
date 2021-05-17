@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Welcome to politician-profiler documentation! &#8212; politician-profiler 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-politician-profiler-documentation">
+<h1>Welcome to politician-profiler documentation!<a class="headerlink" href="#welcome-to-politician-profiler-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-modules.twitter">
+<span id="twitter-api"></span><h1>Twitter API<a class="headerlink" href="#module-modules.twitter" title="Permalink to this headline">¶</a></h1>
+<p>Module for working with Twitter API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.twitter.Twitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">modules.twitter.</span></span><span class="sig-name descname"><span class="pre">Twitter</span></span><a class="headerlink" href="#modules.twitter.Twitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for working with Twitter API.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.twitter.Twitter.get_bearer_token">
+<span class="sig-name descname"><span class="pre">get_bearer_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.twitter.Twitter.get_bearer_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get bearer token from environment variable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.twitter.Twitter.get_latest_tweets">
+<span class="sig-name descname"><span class="pre">get_latest_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.twitter.Twitter.get_latest_tweets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get latest tweets of user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.twitter.Twitter.search_user">
+<span class="sig-name descname"><span class="pre">search_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.twitter.Twitter.search_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get user by nickname.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.twitter.get_twitter_id">
+<span class="sig-prename descclassname"><span class="pre">modules.twitter.</span></span><span class="sig-name descname"><span class="pre">get_twitter_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">politician_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.twitter.get_twitter_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns politician`s Twitter screen name or None if a politician
+does not have a Twitter sccount.</p>
+</dd></dl>
+
+</section>
+<section id="module-modules.trends">
+<span id="trends-adt"></span><h1>Trends ADT<a class="headerlink" href="#module-modules.trends" title="Permalink to this headline">¶</a></h1>
+<p>Module for working with Google Trends.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.trends.Trends">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">modules.trends.</span></span><span class="sig-name descname"><span class="pre">Trends</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper class for pytrends library.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.interest_by_region">
+<span class="sig-name descname"><span class="pre">interest_by_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'COUNTRY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc_low_vol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.interest_by_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get interest by region.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.interest_over_time">
+<span class="sig-name descname"><span class="pre">interest_over_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.interest_over_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get interest overt time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.related_querries">
+<span class="sig-name descname"><span class="pre">related_querries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.related_querries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get related search querries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.related_topics">
+<span class="sig-name descname"><span class="pre">related_topics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.related_topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get related topics.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.suggestions">
+<span class="sig-name descname"><span class="pre">suggestions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.suggestions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get suggestions for keyword.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.top_charts">
+<span class="sig-name descname"><span class="pre">top_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'uk'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.top_charts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get top charts by date.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.trends.Trends.trending_searches">
+<span class="sig-name descname"><span class="pre">trending_searches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ukraine'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.trends.Trends.trending_searches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get trending searhes by country.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-modules.declaration">
+<span id="declaration-adt"></span><h1>Declaration ADT<a class="headerlink" href="#module-modules.declaration" title="Permalink to this headline">¶</a></h1>
+<p>Module for working with the state register of declarations</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.declaration.Declaration">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">modules.declaration.</span></span><span class="sig-name descname"><span class="pre">Declaration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.declaration.Declaration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for working with declarations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.declaration.Declaration.get_declaration">
+<span class="sig-name descname"><span class="pre">get_declaration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.declaration.Declaration.get_declaration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get latest yearly income declaration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.declaration.Declaration.get_declaration_details">
+<span class="sig-name descname"><span class="pre">get_declaration_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.declaration.Declaration.get_declaration_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get detailed yearly income declaration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.declaration.Declaration.get_declaration_link">
+<span class="sig-name descname"><span class="pre">get_declaration_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.declaration.Declaration.get_declaration_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get link to declaration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.declaration.Declaration.get_salary">
+<span class="sig-name descname"><span class="pre">get_salary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.declaration.Declaration.get_salary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get total income from declaration.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-modules.check_database">
+<span id="database"></span><h1>Database<a class="headerlink" href="#module-modules.check_database" title="Permalink to this headline">¶</a></h1>
+<p>Module for checking politicians for corruption.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.check_database.check_all_politicians">
+<span class="sig-prename descclassname"><span class="pre">modules.check_database.</span></span><span class="sig-name descname"><span class="pre">check_all_politicians</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.check_database.check_all_politicians" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if person is a politician.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.check_database.check_knopkodavu">
+<span class="sig-prename descclassname"><span class="pre">modules.check_database.</span></span><span class="sig-name descname"><span class="pre">check_knopkodavu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.check_database.check_knopkodavu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if politician is a button masher.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.check_database.check_politician">
+<span class="sig-prename descclassname"><span class="pre">modules.check_database.</span></span><span class="sig-name descname"><span class="pre">check_politician</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.check_database.check_politician" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check politician for all three points.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.check_database.check_progulshiki">
+<span class="sig-prename descclassname"><span class="pre">modules.check_database.</span></span><span class="sig-name descname"><span class="pre">check_progulshiki</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.check_database.check_progulshiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if politician skips meetings.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.check_database.check_vorishki">
+<span class="sig-prename descclassname"><span class="pre">modules.check_database.</span></span><span class="sig-name descname"><span class="pre">check_vorishki</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.check_database.check_vorishki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if politician has been involved in corruption schemes.</p>
+</dd></dl>
+
+</section>
+<section id="module-modules.wiki">
+<span id="wiki-adt"></span><h1>Wiki ADT<a class="headerlink" href="#module-modules.wiki" title="Permalink to this headline">¶</a></h1>
+<p>Module with WikiADT class for extracting politician`s image and description.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.wiki.WikiADT">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">modules.wiki.</span></span><span class="sig-name descname"><span class="pre">WikiADT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">politician_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.wiki.WikiADT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for storing Wiki information about a politician.</p>
+</dd></dl>
+
+</section>
+<section id="module-modules.article">
+<span id="article-adt"></span><h1>Article ADT<a class="headerlink" href="#module-modules.article" title="Permalink to this headline">¶</a></h1>
+<p>Abstract data type for representing an article.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.article.ArticleADT">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">modules.article.</span></span><span class="sig-name descname"><span class="pre">ArticleADT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">politician_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.article.ArticleADT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for representing a news article.</p>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">politician-profiler</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, students.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
