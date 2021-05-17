@@ -41,6 +41,7 @@ body {
         text-align: justify;
     }
 }
+
 .info {
     display: grid;
     img {
@@ -52,7 +53,6 @@ body {
         object-fit: cover;
     }
 }
-
 
 .latest-news, .interest-overtime, .salary {
     h2 {
@@ -97,6 +97,7 @@ body {
 .interest-overtime {
     margin-bottom: 2em;
 }
+
 .twitter {
     h2 {
         letter-spacing: 0.02em;
@@ -109,7 +110,6 @@ body {
         padding-left: 2em;
         padding-right: 2em;
     }
-    margin-bottom: 8.5em;
 }
 
 .bars {
@@ -248,9 +248,6 @@ a {
     }
     .tweet_text {
         width: 450px;
-    }
-    .twitter {
-        margin-bottom: 5em;
     }
     #list-features {
         display: flex;
