@@ -24,25 +24,18 @@ By using our website, you will:
 
 #### Start page
 ![Start page](images/1.png)
-
 #### Loading page
 ![Loading page](images/2.png)
-
 #### Result page
 ![Result page](images/3.png)
-
 #### Result page
 ![Result page](images/4.png)
-
 #### Result page
 ![Result page](images/5.png)
-
 #### Error page
 ![Error page](images/6.png)
-
 #### Error page
 ![Error page](images/7.png)
-
 #### Video presentation
 [Click here](https://youtu.be/YCokSiGB-GQ)
 
@@ -56,8 +49,9 @@ By using our website, you will:
 * [Homework 5](https://github.com/iamthewalrus67/politician-profiler/wiki/Домашнє-завдання-№5)
 
 
-## Web application
+## Usage
 
+Follow the [link](https://politician-profiler.herokuapp.com/) or clone repository locally and run app.py. Enjoy!
 
 ## Contributing
 
